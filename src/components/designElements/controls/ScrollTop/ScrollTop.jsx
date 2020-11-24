@@ -5,25 +5,36 @@ import PropTypes from 'prop-types'
 import SysButton from '../../../system/atoms/SysButton'
 import { GoChevronUp } from 'react-icons/go'
 
-const ScrollTop = ({ bgColor, ...props }) => (
+const ScrollTop = ({
+    bg,
+    color,
+    scrollTopVariant,
+    scrollTopGlyph,
+    ...props
+}) => (
     <SysButton
         {...props}
         sx={{
-            variant: 'buttons.scrollTop.fixed',
-            bg: { bgColor },
-            verticalAlign: 'sub',
+            bg,
+            color,
+            variant: `${scrollTopVariant}`,
         }}
     >
-        <GoChevronUp />
+        {scrollTopGlyph}
     </SysButton>
 )
 
 ScrollTop.propTypes = {
-    bgColor: PropTypes.string,
+    bg: PropTypes.string,
+    color: PropTypes.any,
+    scrollTopGlyph: PropTypes.any,
+    scrollTopVariant: PropTypes.string,
 }
 
 ScrollTop.defaultProps = {
-    bgcolor: 'primary',
+    bg: 'primary',
+    scrollTopVariant: 'buttons.scrollTop.fixed',
+    scrollTopGlyph: <GoChevronUp />,
 }
 
 export default ScrollTop

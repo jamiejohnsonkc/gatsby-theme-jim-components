@@ -1,30 +1,31 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-
 import PropTypes from 'prop-types'
 import SysButton from '../../../system/atoms/SysButton/SysButton'
 
-const Button = (props) => (
-	<SysButton
-		className='defaultButton'
-		{...props}
-		sx={{
-			color: 'background',
-			bg: 'primary',
-			variant: `${props.buttonVariant}`,
-		}}
-	/>
+const Button = ({ color, bg, buttonChild, buttonVariant, ...props }) => (
+    <SysButton
+        {...props}
+        sx={{
+            color,
+            bg,
+            borderRadius: 4,
+            variant: `${buttonVariant}`,
+        }}
+    >
+        {buttonChild}
+    </SysButton>
 )
 
 Button.propTypes = {
-	buttonVariant: PropTypes.string,
-	children: PropTypes.string,
+    buttonVariant: PropTypes.string,
+    buttonChild: PropTypes.string,
 }
 
 Button.defaultProps = {
-	buttonVariant: 'buttons.lg',
-	children: 'Button',
+    buttonVariant: 'buttons.lg',
+    buttonChild: 'button',
 }
 
 export default Button

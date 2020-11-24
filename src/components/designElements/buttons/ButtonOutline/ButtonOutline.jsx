@@ -1,30 +1,41 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import SysButton from '../../../system/atoms/SysButton'
 import PropTypes from 'prop-types'
+import SysButton from '../../../system/atoms/SysButton'
 
-const ButtonOutline = (props) => (
-	<SysButton
-		className='buttonOutline'
-		{...props}
-		sx={{
-			borderColor: 'primary',
-			border: '.125rem',
-			borderStyle: 'solid',
-			color: 'primary',
-			bg: 'transparent',
-			variant: `${props.buttonVariant}`,
-		}}
-	/>
+const ButtonOutline = ({
+    border,
+    borderColor,
+    color,
+    bg,
+    buttonVariant,
+    buttonChild,
+    ...props
+}) => (
+    <SysButton
+        {...props}
+        sx={{
+            border,
+            borderColor,
+            color,
+            bg,
+            borderRadius: 4,
+            variant: `${buttonVariant}`,
+        }}
+    >
+        {buttonChild}
+    </SysButton>
 )
 
 ButtonOutline.propTypes = {
-	buttonVariant: PropTypes.string,
+    buttonVariant: PropTypes.string,
+    buttonChild: PropTypes.string,
 }
 
 ButtonOutline.defaultProps = {
-	buttonVariant: 'buttons.lg',
+    buttonVariant: 'buttons.lg',
+    buttonChild: 'button',
 }
 
 export default ButtonOutline

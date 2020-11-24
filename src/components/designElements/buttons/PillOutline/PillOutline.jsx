@@ -1,31 +1,40 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import SysButton from '../../../system/atoms/SysButton'
 import PropTypes from 'prop-types'
+import SysButton from '../../../system/atoms/SysButton'
 
-const PillOutline = (props) => (
-	<SysButton
-		{...props}
-		className='pillOutlineButton'
-		sx={{
-			borderColor: 'primary',
-			border: '.125rem',
-			borderRadius: '9999px',
-			borderStyle: 'solid',
-			color: 'primary',
-			bg: 'transparent',
-			variant: `${props.buttonVariant}`,
-		}}
-	/>
+const PillOutline = ({
+    border,
+    borderColor,
+    color,
+    bg,
+    buttonVariant,
+    buttonChild,
+    ...props
+}) => (
+    <SysButton
+        {...props}
+        sx={{
+            border,
+            borderColor,
+            color,
+            bg,
+            variant: `${buttonVariant}`,
+        }}
+    >
+        {buttonChild}
+    </SysButton>
 )
 
 PillOutline.propTypes = {
-	buttonVariant: PropTypes.any,
+    buttonVariant: PropTypes.any,
+    buttonChild: PropTypes.string,
 }
 
 PillOutline.defaultProps = {
-	buttonVariant: 'buttons.lg',
+    buttonVariant: 'buttons.lg',
+    buttonChild: 'button',
 }
 
 export default PillOutline

@@ -8,20 +8,25 @@ const AnchorLink = ({ linkTo, className, variant, ...props }) => (
     <Link
         // {...props}
         to={linkTo}
-        children={props.children}
         className={className}
         sx={{
             variant,
         }}
-    />
+    >
+        {props.children}
+    </Link>
 )
 
 AnchorLink.propTypes = {
+    children: PropTypes.string,
     className: PropTypes.any,
-    children: PropTypes.any,
-    linkTo: PropTypes.any,
+    linkTo: PropTypes.string,
+    variant: PropTypes.any,
 }
 
-AnchorLink.defaultProps = {}
+AnchorLink.defaultProps = {
+    linkTo: '/',
+    children: 'AnchorLink',
+}
 
 export default AnchorLink

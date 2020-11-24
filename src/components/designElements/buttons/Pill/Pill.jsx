@@ -4,31 +4,35 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SysButton from '../../../system/atoms/SysButton'
 
-const Pill = ({ buttonTextColor, ...props }) => (
-    <SysButton
-        className="pillButton"
-        {...props}
-        sx={{
-            borderRadius: '9999px',
-            bg: 'primary',
-            variant: 'buttons.lg',
-            mb: 4,
-            '& > a': {
-                color: `${buttonTextColor}`,
-                textDecoration: 'none',
-            },
-        }}
-    />
+const Pill = ({ color, bg, buttonChild, buttonVariant, ...props }) => (
+    <>
+        <SysButton
+            {...props}
+            sx={{
+                color,
+                bg,
+                variant: `${buttonVariant}`,
+                '& > a': {
+                    color: `${color}`,
+                    textDecoration: 'none',
+                },
+            }}
+        >
+            {buttonChild}
+        </SysButton>
+    </>
 )
 
 Pill.propTypes = {
     buttonVariant: PropTypes.string,
     buttonTextColor: PropTypes.string,
+    buttonChild: PropTypes.string,
 }
 
 Pill.defaultProps = {
     buttonVariant: 'buttons.lg',
     buttonTextColor: 'revText',
+    buttonChild: 'button',
 }
 
 export default Pill
