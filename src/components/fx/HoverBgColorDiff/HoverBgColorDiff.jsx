@@ -6,12 +6,17 @@ import ExtLink from '../../../../../../gatsby-theme-jim-components/src/component
 
 // TODO refactor out style to sep element & style for reuse
 
-const HoverBgColorDiff = (props) => (
+const HoverBgColorDiff = ({
+    iconColor,
+    linkTo,
+    iconInverseBgColor,
+    ...props
+}) => (
     <>
         <ExtLink
             {...props}
             className="iconLinkLink"
-            href={props.linkTo}
+            href={linkTo}
             sx={{
                 cursor: 'pointer',
                 backfaceVisibility: 'hidden',
@@ -27,7 +32,7 @@ const HoverBgColorDiff = (props) => (
                 justifyContent: 'center',
                 alignItems: 'center',
                 '& > svg': {
-                    fill: `${props.iconColor}`,
+                    fill: `${iconColor}`,
                     height: [
                         'unset',
                         '1.5em',
@@ -72,7 +77,7 @@ const HoverBgColorDiff = (props) => (
                     zIndex: '1',
                 },
                 '&::after': {
-                    backgroundColor: `${props.iconInverseBgColor}`,
+                    backgroundColor: `${iconInverseBgColor}`,
                 },
             }}
         >
