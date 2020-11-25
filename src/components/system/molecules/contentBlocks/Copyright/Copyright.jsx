@@ -7,8 +7,9 @@ import OrgLegalName from '../../../../ui/OrgLegalName'
 
 const Copyright = (props) => (
     <Box>
-        © {new Date().getFullYear()}{' '}
-        <OrgLegalName children={props.organizationName} />
+        {' '}
+        © {new Date().getFullYear()}
+        <OrgLegalName>{props.organizationName}</OrgLegalName>
     </Box>
 )
 

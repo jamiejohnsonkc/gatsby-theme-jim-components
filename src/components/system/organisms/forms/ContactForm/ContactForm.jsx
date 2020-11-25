@@ -4,7 +4,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import Button from '../../buttons/Button'
+import Button from '../../../../designElements/buttons/Button'
 
 const ContactForm = (props) => (
     <Box

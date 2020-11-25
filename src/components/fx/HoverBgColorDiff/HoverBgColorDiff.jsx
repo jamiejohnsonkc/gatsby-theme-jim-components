@@ -1,57 +1,43 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Box } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
-import ExtLink from '../../../../../../gatsby-theme-jim-components/src/components/ui/ExtLink'
 
 // TODO refactor out style to sep element & style for reuse
 
 const HoverBgColorDiff = ({
-    iconColor,
     linkTo,
-    iconInverseBgColor,
+    height,
+    width,
+    color,
+    bg,
+    boxTransition,
+    beforeAfterTransition,
+    hoverBeforeAfterTransition,
+    beforeBg,
+    beforeMixBlendMode,
+    inverseBgColor,
     ...props
 }) => (
     <>
-        <ExtLink
+        <Box
             {...props}
             className="iconLinkLink"
             href={linkTo}
             sx={{
-                cursor: 'pointer',
+                height,
+                width,
+                color,
+                bg,
                 backfaceVisibility: 'hidden',
                 overflow: 'hidden',
                 position: 'relative',
-                transition:
-                    'color 200ms ease-in-out 0ms, transform 100ms ease-out 0s',
+                transition: `${boxTransition}`,
                 zIndex: '1',
                 background: 'none',
-                height: ['2.25em', '3em', '2.25em', '1em', '2em', '2em'],
-                width: ['2.25em', '3em', '2.25em', '1em', '2em', '2em'],
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                '& > svg': {
-                    fill: `${iconColor}`,
-                    height: [
-                        'unset',
-                        '1.5em',
-                        '1.5em',
-                        '1em',
-                        '1em',
-                        '1em',
-                        '1em',
-                    ],
-                    width: [
-                        'unset',
-                        '1.5em',
-                        '1.5em',
-                        '1em',
-                        '1em',
-                        '1em',
-                        '1em',
-                    ],
-                },
 
                 '&::before, &::after': {
                     content: '""',
@@ -62,44 +48,50 @@ const HoverBgColorDiff = ({
                     top: '0px',
                     transform: 'translateX(-110%)',
                     transformOrigin: 'left center',
-                    transition: 'transform 200ms ease-in 0s',
+                    transition: `${beforeAfterTransition}`,
                     width: '100%',
                     willChange: 'transform',
                     zIndex: '-1',
                 },
                 '&:hover::before, &:hover::after': {
                     transform: 'translateX(0px)',
-                    transition: 'transform 200ms ease-in-out 0ms',
+                    transition: `${hoverBeforeAfterTransition}`,
                 },
                 '&::before': {
-                    backgroundColor: 'background',
-                    mixBlendMode: 'difference',
+                    backgroundColor: `${beforeBg}`,
+                    mixBlendMode: `${beforeMixBlendMode}`,
                     zIndex: '1',
                 },
                 '&::after': {
-                    backgroundColor: `${iconInverseBgColor}`,
+                    backgroundColor: `${inverseBgColor}`,
                 },
             }}
         >
             {props.children}
-        </ExtLink>
+        </Box>
     </>
 )
 
 HoverBgColorDiff.propTypes = {
     linkTo: PropTypes.string,
-    iconColor: PropTypes.string,
-    iconHoverColor: PropTypes.string,
-    iconInverseBgColor: PropTypes.string,
-    // iconName: PropTypes.string,
+    color: PropTypes.string,
+    boxTransition: PropTypes.string,
+    beforeAfterTransition: PropTypes.string,
+    hoverBeforeAfterTransition: PropTypes.string,
+    beforeBg: PropTypes.string,
+    beforeMixBlendMode: PropTypes.string,
+    inverseBgColor: PropTypes.string,
 }
 
 HoverBgColorDiff.defaultProps = {
     linkTo: '/',
-    iconColor: '#000',
-    iconHoverColor: 'background',
-    iconInverseBgColor: 'rgb(81,156,27)',
-    // iconName: 'shapes',
+    color: 'primary',
+    inverseBgColor: 'rgb(81,156,27)',
+    boxTransition: 'color 200ms ease-in-out 0ms, transform 100ms ease-out 0s',
+    beforeAfterTransition: 'transform 200ms ease-in 0s',
+    beforeBg: 'background',
+    hoverBeforeAfterTransition: 'transform 200ms ease-in-out 0ms',
+    beforeMixBlendMode: 'difference',
 }
 
 export default HoverBgColorDiff

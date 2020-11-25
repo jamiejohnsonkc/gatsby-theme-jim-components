@@ -4,14 +4,16 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
+//TODO refactor
+
 const Ul = (props) => (
-	<ul
-		{...props}
-		sx={{
-			variant: `${props.ulVariant}`,
-		}}
-		children={props.children}
-	/>
+    <ul
+        {...props}
+        sx={{
+            variant: `${props.ulVariant}`,
+        }}
+        children={props.children}
+    />
 )
 
 Ul.propTypes = {}
