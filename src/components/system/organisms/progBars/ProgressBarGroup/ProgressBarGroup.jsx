@@ -8,33 +8,35 @@ import GroupSubGrid from '../GroupSubGrid/GroupSubGrid'
 import GroupSubhead from '../GroupSubhead/GroupSubhead'
 // import GroupHead from '../GroupHead/GroupHead'
 
+// TODO find a home for this entire module in components/storybook - it's not reusable so where/if to include it?
+
 const ProgressBarGroup = ({
-	groupSubGridColumns,
-	groupHead,
-	groupSubhead,
-	subGridPaddingRight,
-	...props
+    groupSubGridColumns,
+    groupHead,
+    groupSubhead,
+    subGridPaddingRight,
+    ...props
 }) => (
-	<>
-		<GroupSubGrid
-			className='groupSubGrid'
-			columns={groupSubGridColumns}
-			{...props}
-			sx={{
-				paddingRight: `${subGridPaddingRight}`,
-			}}
-		>
-			<GroupSubhead
-				className='groupSubhead'
-				groupSubhead={groupSubhead}
-				{...props}
-				sx={{
-					gridColumn: ['1/2', '1/2', '1/2', '1/2', '1/3', '1/3'],
-				}}
-			/>
-			{props.children}
-		</GroupSubGrid>
-	</>
+    <>
+        <GroupSubGrid
+            className="groupSubGrid"
+            columns={groupSubGridColumns}
+            {...props}
+            sx={{
+                paddingRight: `${subGridPaddingRight}`,
+            }}
+        >
+            <GroupSubhead
+                className="groupSubhead"
+                groupSubhead={groupSubhead}
+                {...props}
+                sx={{
+                    gridColumn: ['1/2', '1/2', '1/2', '1/2', '1/3', '1/3'],
+                }}
+            />
+            {props.children}
+        </GroupSubGrid>
+    </>
 )
 
 export default ProgressBarGroup

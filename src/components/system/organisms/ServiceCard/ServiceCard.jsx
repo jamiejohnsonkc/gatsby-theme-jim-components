@@ -2,9 +2,11 @@
 import PropTypes from 'prop-types'
 import { Box, Card, jsx } from 'theme-ui'
 import React from 'react'
-import VisHdngText from '../../../../../../../gatsby-theme-jim-components/src/components/contentBlocks/VisHdngText'
-import CtaLinkInt from '../../../../../../../gatsby-theme-jim-components/src/components/ui/CtaLinkInt'
-import FpoImageWireFrame from '../../../../../../../gatsby-theme-jim-components/src/components/utilities/fpo/FpoImageWireFrame'
+import VisHdngText from '../../molecules/contentBlocks/VisHdngText'
+import CtaLinkInt from '../../../ui/CtaLinkInt'
+import FpoImageWireFrame from '../../../utilities/fpo/FpoImageWireFrame'
+
+//TODO refactor style
 
 const ServiceCard = ({
     linkText,

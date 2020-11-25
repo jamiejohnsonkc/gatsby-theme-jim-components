@@ -5,26 +5,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import GlyphIpsum from '../../../../svg/assets/fpo/glyph-1.svg'
 
+//TODO refactor
+
 const FpoGlyph = (props) => (
-	<>
-		<GlyphIpsum
-			{...props}
-			sx={{
-				fill: `${props.glyphFill}`,
-				width: `${props.glyphWidth}`,
-			}}
-		/>
-	</>
+    <>
+        <GlyphIpsum
+            {...props}
+            sx={{
+                fill: `${props.glyphFill}`,
+                width: `${props.glyphWidth}`,
+            }}
+        />
+    </>
 )
 
 FpoGlyph.propTypes = {
-	glyphFill: PropTypes.any,
-	glyphWidth: PropTypes.any,
+    glyphFill: PropTypes.any,
+    glyphWidth: PropTypes.any,
 }
 
 FpoGlyph.defaultProps = {
-	glyphFill: 'primary',
-	glyphWidth: '100%',
+    glyphFill: 'primary',
+    glyphWidth: '100%',
 }
 
 export default FpoGlyph

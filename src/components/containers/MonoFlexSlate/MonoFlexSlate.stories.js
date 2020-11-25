@@ -2,7 +2,7 @@
 import { jsx, Text, Box } from 'theme-ui'
 import React from 'react'
 import MonoFlexSlate from './MonoFlexSlate'
-import Button from '../../../../product/designElements/buttons/Button/Button'
+import Button from '../../designElements/buttons/Button'
 
 export default {
 	title: 'Layout Elements/Slates/MonoFlexSlate',

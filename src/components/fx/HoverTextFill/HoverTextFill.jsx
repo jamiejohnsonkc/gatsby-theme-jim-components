@@ -2,12 +2,12 @@
 import PropTypes from 'prop-types'
 import { jsx } from 'theme-ui'
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 //TODO refactor
 
 const HoverTextFill = (props) => (
-    <Link
+    <Box
         className={props.className}
         {...props}
         sx={{
@@ -42,7 +42,7 @@ const HoverTextFill = (props) => (
             aria-hidden="true"
         />
         {props.children}
-    </Link>
+    </Box>
 )
 
 HoverTextFill.propTypes = {

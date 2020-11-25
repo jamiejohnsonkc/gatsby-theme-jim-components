@@ -3,24 +3,24 @@ import { jsx, Container } from 'theme-ui'
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import FlexBlock from '../../../molecules/containers/flexBlocks/FlexBlock'
+import FlexBlock from '../flexBlocks/FlexBlock'
 
-const MonoFlexSlate = (props) => (
-	<div
-		{...props}
-		sx={{
-			height: '100%',
-			width: '100%',
-			justifyContent: 'center',
-			alignItems: 'center',
-			position: 'relative',
-			display: 'flex',
-		}}
-	>
-		<Container className='Container'>
-			<FlexBlock {...props}>{props.flexItemContent}</FlexBlock>
-		</Container>
-	</div>
+const MonoFlexSlate = ({ flexItemContent, ...props }) => (
+    <div
+        {...props}
+        sx={{
+            height: '100%',
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: 'relative',
+            display: 'flex',
+        }}
+    >
+        <Container className="Container">
+            <FlexBlock {...props}>{flexItemContent}</FlexBlock>
+        </Container>
+    </div>
 )
 
 MonoFlexSlate.propTypes = {}

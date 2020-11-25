@@ -3,7 +3,7 @@ import { jsx, Box, Input, Label, Styled, Text, Textarea } from 'theme-ui'
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Button from '../../../../designElements/buttons/Button'
 
 const ContactForm = (props) => (

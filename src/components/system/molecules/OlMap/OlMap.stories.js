@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import Ol from '../../atoms/Lists/Ol/Ol'
-import Li from '../../atoms/Lists/Li/Li'
+import Ol from '../../atoms/Ol'
+import Li from '../../atoms/Li'
 import PropTypes from 'prop-types'
 
 export default {

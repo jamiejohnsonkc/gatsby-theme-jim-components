@@ -2,11 +2,11 @@
 import { jsx, Box } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
-import GroupGrid from '../GroupGrid/GroupGrid.jsx'
-import GroupHead from '../GroupHead/GroupHead.jsx'
-import ProgressBarGroup from '../ProgressBarGroup/ProgressBarGroup.jsx'
-import Groups from '../../../../../../../devSite/src/data/skillProgress.json'
-import LabeledProgressBar from '../../LabeledProgressBar/index.js'
+import GroupGrid from '../GroupGrid/GroupGrid'
+import GroupHead from '../GroupHead/GroupHead'
+import ProgressBarGroup from '../ProgressBarGroup/ProgressBarGroup'
+import Data from '../sampleData'
+import LabeledProgressBar from '../../LabeledProgressBar'
 
 const ProgBarGrpMap = ({
     groupGridColumns,
@@ -33,7 +33,7 @@ const ProgBarGrpMap = ({
             }}
         >
             <Box className="grid">
-                {Groups.map((group, id) => (
+                {Data.map((group, id) => (
                     <>
                         <GroupHead key={id} groupHead={group.groupHead} />
                         <GroupGrid groupGridColumns={group.groupGridColumns}>

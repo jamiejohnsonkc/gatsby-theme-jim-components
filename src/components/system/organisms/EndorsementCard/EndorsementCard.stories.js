@@ -1,5 +1,5 @@
 import React from 'react'
-import FpoImageWireFrame from '../../../../../../../gatsby-theme-jim-components/src/components/utilities/fpo/FpoImageWireFrame'
+import FpoImageWireFrame from '../../../utilities/fpo/FpoImageWireFrame'
 import EndorsementCard from './EndorsementCard'
 
 export default {

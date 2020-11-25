@@ -2,6 +2,9 @@
 import { jsx, Text } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from '../../designElements/buttons/Button'
+
+//TODO refactor for reuse
 
 const TextButtonX2 = ({
     textVariant,

@@ -3,14 +3,14 @@ import { jsx, Box, Text, Card } from 'theme-ui'
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import FpoImageWireFrame from '../../../../../../../gatsby-theme-jim-components/src/components/utilities/fpo/FpoImageWireFrame'
+import CtaLinkExt from '../../../ui/CtaLinkExt'
+import FpoImageWireFrame from '../../../utilities/fpo/FpoImageWireFrame'
 // import ExtLink from '../../../../../../../gatsby-theme-jim-components/src/components/system/atoms/ExtLink'
 // import Icon from '../../../../../../../gatsby-theme-jim-components/src/components/system/atoms/Icon'
 // import styled from '@emotion/styled'
 // import { ImArrowUpRight } from 'react-icons/im'
 // import palette from '../../../../../../../gatsby-theme-jim-theme-ui/src/gatsby-plugin-theme-ui/palette'
-import animation from '../../../../../../../gatsby-theme-scroll-reveal/animation'
-import CtaLinkExt from '../../../../../../../gatsby-theme-jim-components/src/components/ui/CtaLinkExt'
+
 // import { alpha } from '@theme-ui/color'
 
 //TODO refactor
@@ -63,7 +63,6 @@ const EndorsementCard = ({
         >
             <Card
                 className="endorsementCard"
-                {...animation.slideUp4NoTrans}
                 {...props}
                 sx={{
                     // px: [0, 4, 4, 0, 0, 2],

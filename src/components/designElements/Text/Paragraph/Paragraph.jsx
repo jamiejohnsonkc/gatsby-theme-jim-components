@@ -7,22 +7,24 @@ import styled from '@emotion/styled'
 
 const StyledParagraph = styled.p``
 
+//TODO Refactor like caption?
+
 const Paragraph = ({ paragraphContainer, ...props }) => (
-	<StyledParagraph
-		{...props}
-		sx={{
-			variant: 'paragraphContainer',
-		}}
-	>
-		<Text
-			{...props}
-			sx={{
-				variant: 'paragraphText',
-			}}
-		>
-			{props.children}
-		</Text>
-	</StyledParagraph>
+    <StyledParagraph
+        {...props}
+        sx={{
+            variant: 'paragraphContainer',
+        }}
+    >
+        <Text
+            {...props}
+            sx={{
+                variant: 'paragraphText',
+            }}
+        >
+            {props.children}
+        </Text>
+    </StyledParagraph>
 )
 
 Paragraph.propTypes = {}

@@ -1,25 +1,27 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Box } from 'theme-ui'
 import React from 'react'
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types' // eslint-disable-line import/no-extraneous-dependencies
 
-const Pancake = (props) => (
-	<Pancake
-		className='Pancake'
-		{...props}
-		sx={{
-			variant: `${props.pancakePy}`,
-		}}
-	/>
+//TODO compare with original component from saas spec (or prof services?)
+
+const Pancake = ({ pancakeVariant, ...props }) => (
+    <Box
+        className="Pancake"
+        {...props}
+        sx={{
+            variant: `${pancakeVariant}`,
+        }}
+    />
 )
 
 Pancake.propTypes = {
-	pancakePy: PropTypes.any,
+    pancakeVariant: PropTypes.any,
 }
 
 Pancake.defaultProps = {
-	pancakePy: 6,
+    pancakeVariant: '',
 }
 
 export default Pancake
