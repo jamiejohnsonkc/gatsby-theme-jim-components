@@ -5,7 +5,7 @@ import ImageWCaption from './ImageWCaption'
 import FpoImageWireFrame from '../../../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
 
 export default {
-	title: 'Base/Content Blocks/Image with caption',
+	title: 'Content Blocks/Image with caption',
 }
 
 export const standard = (props) => (

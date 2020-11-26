@@ -1,7 +1,7 @@
 import Caption from './Caption'
 
 export default {
-	title: 'Caption',
+	title: 'Typography/Caption',
 }
 
 export const standard = () => <Caption />

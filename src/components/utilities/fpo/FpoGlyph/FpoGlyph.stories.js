@@ -2,7 +2,7 @@ import React from 'react'
 import FpoGlyph from './FpoGlyph'
 
 export default {
-	title: 'FpoGlyph',
+	title: 'Dev Utilities/FpoGlyph',
 }
 
 export const standard = () => <FpoGlyph />

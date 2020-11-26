@@ -2,7 +2,7 @@ import React from 'react'
 import FpoStaticAstronaut from './FpoStaticAstronaut'
 
 export default {
-	title: 'FpoStaticAstronaut',
+	title: 'Dev Utilities/FpoStaticAstronaut',
 }
 
 export const standard = () => <FpoStaticAstronaut />

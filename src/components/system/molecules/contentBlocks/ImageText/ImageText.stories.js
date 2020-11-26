@@ -2,7 +2,7 @@ import React from 'react'
 import ImageText from './ImageText'
 
 export default {
-	title: 'ImageText',
+	title: 'Content Blocks/ImageText',
 }
 
 export const standard = () => <ImageText />

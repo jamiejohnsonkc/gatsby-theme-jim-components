@@ -2,7 +2,7 @@ import React from 'react'
 import HomeLink from './HomeLink'
 
 export default {
-	title: 'HomeLink',
+	title: 'Ui/HomeLink',
 }
 
 export const standard = () => <HomeLink />

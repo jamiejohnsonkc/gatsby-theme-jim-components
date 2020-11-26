@@ -2,7 +2,7 @@ import React from 'react'
 import Paragraph from './Paragraph'
 
 export default {
-title: 'Paragraph',
+	title: 'Typography/Paragraph',
 }
 
 export const standard = () => (

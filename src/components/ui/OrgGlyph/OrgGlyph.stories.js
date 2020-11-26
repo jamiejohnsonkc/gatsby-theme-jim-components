@@ -5,7 +5,7 @@ import OrgGlyph from './OrgGlyph'
 import colors from '../../../../../gatsby-theme-jim-theme-ui/src/gatsby-plugin-theme-ui/colors'
 
 export default {
-	title: 'OrgGlyph',
+	title: 'Style/Identity/OrgGlyph',
 }
 
 export const standard = (props) => (

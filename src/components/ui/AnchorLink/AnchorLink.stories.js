@@ -2,7 +2,7 @@ import React from 'react'
 import AnchorLink from './AnchorLink'
 
 export default {
-	title: 'AnchorLink',
+	title: 'Ui/AnchorLink',
 }
 
 export const standard = () => <AnchorLink />

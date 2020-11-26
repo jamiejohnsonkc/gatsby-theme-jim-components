@@ -3,7 +3,7 @@ import FpoImageWireFrame from '../../../utilities/fpo/FpoImageWireFrame'
 import EndorsementCard from './EndorsementCard'
 
 export default {
-  title: 'EndorsementCard',
+  title: 'Templates/EndorsementCard',
 }
 
 export const standard = () => (

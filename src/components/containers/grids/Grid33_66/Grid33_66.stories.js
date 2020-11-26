@@ -4,7 +4,7 @@ import React from 'react'
 import Grid33_66 from './Grid33_66'
 
 export default {
-	title: 'Layout Elements/Grids/Columns/variable/[2, `1fr, 2fr`]',
+	title: 'Layout/Grid/[2, `1fr, 2fr`]',
 }
 
 export const standard = (props) => (

@@ -5,7 +5,7 @@ import Bottom from './Bottom'
 import Copyright from '../../system/molecules/contentBlocks/Copyright'
 
 export default {
-	title: 'Layout Elements/Page Units/Bottom',
+	title: 'Layout/Page Elements/Bottom',
 }
 
 export const standard = () => <Bottom bottomContent={<Copyright />} />

@@ -5,7 +5,7 @@ import ImageTextButton from './ImageTextButton'
 import FpoImageWireFrame from '../../../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
 
 export default {
-	title: 'Base/Content Blocks/Image, Text, Button',
+	title: 'Content Blocks/Image, Text, Button',
 }
 
 export const standard = (props) => (

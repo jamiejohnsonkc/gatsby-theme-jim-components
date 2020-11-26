@@ -1,7 +1,7 @@
 import Display from './Display'
 
 export default {
-	title: 'Display',
+	title: 'Typography/Display',
 }
 
 export const standard = () => <Display />

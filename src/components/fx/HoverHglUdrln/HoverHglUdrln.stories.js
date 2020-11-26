@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default {
-	title: 'HoverHglUdrln',
+	title: 'Style/Hover Styles/Hover highlight & underline',
 }
 
 export const HoverHglUdrln = (props) => (

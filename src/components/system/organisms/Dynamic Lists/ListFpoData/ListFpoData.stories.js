@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-	title: 'Lists/Dynamic_Lists/Modular/Sample_Data',
+	title: 'Containers/Lists/Sample_Data',
 }
 
 export const List = () => {

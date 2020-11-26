@@ -2,7 +2,7 @@ import React from 'react'
 import TextButton from './TextButton'
 
 export default {
-	title: 'Base/Content Blocks/Text & Button',
+	title: 'Content Blocks/Text & Button',
 }
 
 export const standard = () => (

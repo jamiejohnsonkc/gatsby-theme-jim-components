@@ -3,7 +3,7 @@ import { jsx, Box } from 'theme-ui'
 import React from 'react'
 
 export default {
-	title: 'Lists/Dynamic Lists/Modular/List Item',
+	title: 'Containers/Lists/List Item',
 }
 
 export const DynamicLi = ({ item }) => (

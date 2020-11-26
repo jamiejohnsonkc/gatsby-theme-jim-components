@@ -1,7 +1,7 @@
 import Utility from './Utility'
 
 export default {
-	title: 'Utility',
+	title: 'Typography/Utility',
 }
 
 export const standard = () => <Utility />

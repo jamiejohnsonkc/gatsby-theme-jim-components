@@ -2,7 +2,7 @@
 import Subline from './Subline'
 
 export default {
-	title: 'Subline',
+	title: 'Typography/Subline',
 }
 
 export const standard = () => <Subline />

@@ -4,7 +4,7 @@ import React from 'react'
 import DynamicLi from '../DynamicLi/DynamicLi'
 
 export default {
-	title: 'Lists/Dynamic_Lists/Modular/List',
+title: 'Containers/Lists',
 }
 
 export const DynamicList = ({ list }) => (

@@ -1,7 +1,7 @@
 import Subhead from './Subhead'
 
 export default {
-	title: 'Subhead',
+	title: 'Typography/Subhead',
 }
 
 export const standard = () => <Subhead />

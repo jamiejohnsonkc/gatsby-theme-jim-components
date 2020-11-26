@@ -3,7 +3,7 @@ import { jsx, Box, Grid } from 'theme-ui'
 import React from 'react'
 
 export default {
-	title: 'Layout Elements/Grids/Columns/variable/[1, `1fr, 3fr`]',
+	title: 'Layout/Grid/[1, `1fr, 3fr`]',
 }
 
 export const standard = (props) => (

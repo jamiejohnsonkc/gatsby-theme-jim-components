@@ -2,7 +2,7 @@ import React from 'react'
 import SectionWrapper from './SectionWrapper'
 
 export default {
-  title: 'SectionWrapper',
+  title: 'Layout/SectionWrapper',
 }
 
 export const standard = () => <SectionWrapper />

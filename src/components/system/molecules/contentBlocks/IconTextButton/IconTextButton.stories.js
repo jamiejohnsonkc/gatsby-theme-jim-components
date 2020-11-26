@@ -4,7 +4,7 @@ import React from 'react'
 import IconTextButton from './IconTextButton'
 
 export default {
-	title: 'Base/Content Blocks/Icon,text & button',
+	title: 'Content Blocks/Icon,text & button',
 }
 
 export const standard = () => (

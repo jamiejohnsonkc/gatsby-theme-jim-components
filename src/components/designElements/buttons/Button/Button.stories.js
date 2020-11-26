@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import Button from './Button'
 
 export default {
-	title: 'Design Elements/Buttons/Button',
+	title: 'Design Elements/Buttons/Default',
 }
 
 export const Large = (props) => (

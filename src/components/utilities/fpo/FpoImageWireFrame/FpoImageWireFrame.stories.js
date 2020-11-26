@@ -5,7 +5,7 @@ import FpoImageWireFrame from './FpoImageWireFrame'
 
 
 export default {
-	title: 'FpoImageWireFrame',
+	title: 'Dev Utilities/FpoImageWireFrame',
 }
 
 export const standard = (props) => (

@@ -2,7 +2,7 @@ import React from 'react'
 import GridCover from './GridCover'
 
 export default {
-title: 'GridCover',
+	title: 'Layout/Grid/GridCover',
 }
 
 export const standard = () => (

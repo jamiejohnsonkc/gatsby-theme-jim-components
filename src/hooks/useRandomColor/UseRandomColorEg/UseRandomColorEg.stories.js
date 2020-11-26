@@ -2,7 +2,7 @@ import React from 'react'
 import UseRandomColorEg from './UseRandomColorEg'
 
 export default {
-	title: 'UseRandomColorEg',
+	title: 'Templates/UseRandomColorEg',
 }
 
 export const standard = () => <UseRandomColorEg />

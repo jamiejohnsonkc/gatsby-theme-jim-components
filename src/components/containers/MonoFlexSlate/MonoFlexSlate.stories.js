@@ -5,7 +5,7 @@ import MonoFlexSlate from './MonoFlexSlate'
 import Button from '../../designElements/buttons/Button'
 
 export default {
-	title: 'Layout Elements/Slates/MonoFlexSlate',
+	title: 'Layout/Flex/MonoFlexSlate',
 }
 
 const flexBlockStyle = { width: '44%' }

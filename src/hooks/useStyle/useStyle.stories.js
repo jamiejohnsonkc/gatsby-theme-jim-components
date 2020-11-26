@@ -2,7 +2,7 @@ import React from 'react'
 import useStyle from './useStyle'
 
 export default {
-	title: 'useStyle',
+	title: 'Hooks/useStyle',
 }
 
 export const standard = () => <useStyle />

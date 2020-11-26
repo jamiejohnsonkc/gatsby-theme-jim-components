@@ -4,13 +4,11 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-import IconLink from '../../../jamiejohnsonkc/src/components/product/templates/bits/IconLink/IconLink'
-
 // const linkTest = {
 
 // }
 
-//TODO OOC
+//TODO refactor for mapping
 
 const IconbarWrapper = (props) => (
     <Box

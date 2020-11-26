@@ -5,7 +5,7 @@ import FpoImageWireFrame from '../../../../utilities/fpo/FpoImageWireFrame'
 import ImageTextLink from './ImageTextLink'
 
 export default {
-	title: 'ImageTextLink',
+	title: 'Content Blocks/ImageTextLink',
 }
 
 export const standard = (props) => (

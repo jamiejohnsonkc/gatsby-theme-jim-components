@@ -2,7 +2,7 @@ import React from 'react'
 import MainWrapper from './MainWrapper'
 
 export default {
-title: 'MainWrapper',
+title: 'Layout/MainWrapper',
 }
 
 export const standard = () => (

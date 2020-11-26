@@ -2,7 +2,7 @@ import React from 'react'
 import CtaLinkInt from './CtaLinkInt'
 
 export default {
-title: 'CtaLinkInt',
+  title: 'Ui/CtaLinkInt',
 }
 
 export const standard = () => (

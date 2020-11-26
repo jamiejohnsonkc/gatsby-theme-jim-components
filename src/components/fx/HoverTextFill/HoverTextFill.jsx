@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import PropTypes from 'prop-types'
-import { jsx } from 'theme-ui'
+import { jsx, Box } from 'theme-ui'
 import React from 'react'
 // import { Link } from 'gatsby'
 

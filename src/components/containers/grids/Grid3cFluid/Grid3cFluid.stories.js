@@ -4,7 +4,7 @@ import React from 'react'
 import Grid3cFluid from './Grid3cFluid'
 
 export default {
-	title: 'Layout Elements/Grids/Columns/Fixed/variable/FluidWidth3Col',
+	title: 'Layout/Grid/FluidWidth3Col',
 }
 
 export const standard = (props) => (

@@ -2,7 +2,7 @@ import React from 'react'
 import ProgressBar from './ProgressBar'
 
 export default {
-	title: 'ProgressBar',
+	title: 'Presentation/ProgressBar',
 }
 
 export const standard = () => <ProgressBar />

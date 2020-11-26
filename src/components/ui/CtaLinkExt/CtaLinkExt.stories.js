@@ -5,7 +5,7 @@ import CtaLinkExt from './CtaLinkExt'
 import { darken } from '@theme-ui/color'
 
 export default {
-	title: 'Navigation/Links/Text + Icon',
+	title: 'Ui/Cta Link External',
 }
 
 export const standard = (props) => (

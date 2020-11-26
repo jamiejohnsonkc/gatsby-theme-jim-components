@@ -3,7 +3,7 @@ import OrgLogo from './OrgLogo'
 
 
 export default {
-	title: 'OrgLogo',
+	title: 'Style/Identity/OrgLogo',
 }
 
 export const standard = (props) => <OrgLogo width='6em' />

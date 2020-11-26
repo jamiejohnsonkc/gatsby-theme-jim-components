@@ -6,7 +6,7 @@ import Li from '../../atoms/Li'
 import PropTypes from 'prop-types'
 
 export default {
-	title: 'Lists/Composed/Ol',
+	title: 'Containers/Ol map',
 }
 
 export const OlMap = ({ list, ...props }) => {
