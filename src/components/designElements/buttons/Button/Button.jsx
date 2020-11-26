@@ -27,7 +27,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-    buttonChild: 'Child',
+    buttonChild: 'button',
     // buttonVariant: 'buttons.lg',
 }
 

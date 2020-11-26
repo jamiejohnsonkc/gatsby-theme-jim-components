@@ -12,6 +12,7 @@ const Pill = ({ color, bg, buttonChild, buttonVariant, ...props }) => (
                 color,
                 bg,
                 variant: `${buttonVariant}`,
+                borderRadius: '3em',
                 '& > a': {
                     color: `${color}`,
                     textDecoration: 'none',
@@ -30,9 +31,7 @@ Pill.propTypes = {
 }
 
 Pill.defaultProps = {
-    buttonVariant: 'buttons.lg',
-    buttonTextColor: 'revText',
-    buttonChild: 'button',
+    buttonChild: 'Pill',
 }
 
 export default Pill
