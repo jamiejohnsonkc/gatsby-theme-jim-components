@@ -1,19 +1,25 @@
 /** @jsx jsx */
-import { jsx, Button } from 'theme-ui'
+import PropTypes from 'prop-types'
+import { jsx, Button, Text } from 'theme-ui'
 import React from 'react'
 
 //TODO confirm button style functionality (button, outline, pill, pill outline)
 //TODO Test button functionality - how to handle internal vs external button links(?)
 
-const SysButton = ({ buttonChild, ...props }) => (
+const SysButton = ({ buttonChild, variant = 'buttons.basic', ...props }) => (
     <Button
         className="sysButton"
         {...props}
         sx={{
-            variant: 'buttons.basic',
+            variant: `buttons.${variant}`,
         }}
-    >
-        {buttonChild}
-    </Button>
+    />
 )
+
+SysButton.propTypes = {
+    variant: PropTypes.string,
+}
+
+// SysButton.defaultProps = {
+// }
 export default SysButton
