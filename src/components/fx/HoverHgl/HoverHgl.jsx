@@ -11,12 +11,7 @@ const BackgroundSpan = styled.span`
     }
 `
 
-const DecorationSpan = styled.span`
-     {
-    }
-`
-
-const HoverHglUdrln = ({
+const HoverHgl = ({
     textColor,
     outlineColor,
     differenceColor,
@@ -90,46 +85,22 @@ const HoverHglUdrln = ({
         }}
     >
         {props.children}
-        <DecorationSpan
-            {...props}
-            sx={{
-                // height: '2px',
-                height: `${underlineHeight}`,
-                // backgroundColor: 'primary',
-                backgroundColor: `${underlineColor}`,
-                bottom: '0px',
-                display: 'block',
-                // left: '0px',
-                position: 'absolute',
-                transformOrigin: 'left center',
-                transition: 'transform 200ms ease-out 0s',
-                // width: '100%',
-                willChange: 'transform',
-                zIndex: '1',
-            }}
-        />
     </BackgroundSpan>
 )
 
-HoverHglUdrln.propTypes = {
+HoverHgl.propTypes = {
     differenceColor: PropTypes.any,
     // hoverText: PropTypes.string,
     outlineColor: PropTypes.any,
     textColor: PropTypes.any,
-    underlineColor: PropTypes.any,
-    underlineHeight: PropTypes.any,
     children: PropTypes.string,
 }
 
-HoverHglUdrln.defaultProps = {
+HoverHgl.defaultProps = {
     differenceColor: 'rgb(252,86,11)',
-    // differenceColor: 'bleed',
-    // hoverText: '',
     outlineColor: 'primary',
     textColor: 'text',
-    underlineColor: 'primary',
-    underlineHeight: '4px',
-    children: 'Hover Animated Highlight + Underline',
+    children: 'Hover Animated Highlight',
 }
 
-export default HoverHglUdrln
+export default HoverHgl

@@ -1,18 +1,29 @@
 /** @jsx jsx */
 import { jsx, Heading } from 'theme-ui'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-//TODO Refactor like caption?
-
-const Subhead = ({ as, ...props }) => (
+const Subhead = ({ variant = 'Subhead', subheadAs, ...props }) => (
     <Heading
         {...props}
-        as={as}
+        as={subheadAs}
         sx={{
-            variant: 'subhead',
+            variant: `${variant}`,
         }}
-        children={props.children}
-    />
+    >
+        {props.children}
+    </Heading>
 )
+
+Subhead.propTypes = {
+    variant: PropTypes.string,
+    children: PropTypes.string,
+    subheadAs: PropTypes.string,
+}
+
+Subhead.defaultProps = {
+    children: 'Subheads augment headlines.',
+    subheadAs: 'h2',
+}
 
 export default Subhead

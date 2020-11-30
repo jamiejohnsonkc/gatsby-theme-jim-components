@@ -2,7 +2,8 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
-import SysButton from '../../../system/atoms/SysButton'
+import Button from '../Button'
+// import SysButton from '../../../system/atoms/SysButton'
 
 const ButtonOutline = ({
     border,
@@ -13,29 +14,33 @@ const ButtonOutline = ({
     buttonChild,
     ...props
 }) => (
-    <SysButton
+    <Button
         {...props}
         sx={{
-            border,
+            border: 'base',
             borderColor,
             color,
-            bg,
+            bg: 'transparent',
             borderRadius: 4,
             variant: `${buttonVariant}`,
         }}
     >
         {buttonChild}
-    </SysButton>
+    </Button>
 )
 
 ButtonOutline.propTypes = {
-    buttonVariant: PropTypes.string,
+    buttonVariant: PropTypes.any,
     buttonChild: PropTypes.string,
+    borderColor: PropTypes.string,
+    color: PropTypes.string,
 }
 
 ButtonOutline.defaultProps = {
     buttonVariant: 'buttons.lg',
     buttonChild: 'button',
+    borderColor: 'primary',
+    color: 'primary',
 }
 
 export default ButtonOutline

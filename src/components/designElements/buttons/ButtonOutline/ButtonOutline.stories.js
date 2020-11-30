@@ -2,37 +2,30 @@
 import { jsx } from 'theme-ui'
 import ButtonOutline from './ButtonOutline'
 
+
 export default {
 	title: 'Design Elements/Buttons/ButtonOutline',
-}
+	component: ButtonOutline,
+	argTypes: {
+		backgroundColor: {control: 'color'},
+		buttonChild: {control: 'text'},
+		buttonVariant: {control: 'text'},
+	},
+};
 
-export const ButtonOutlineLarge = (props) => (
-	<ButtonOutline
-		{...props}
-		sx={{
-			variant: 'buttons.lg',
-		}}
-	>
-		Button
-	</ButtonOutline>
-)
-export const ButtonOutlineMedium = (props) => (
-	<ButtonOutline
-		{...props}
-		sx={{
-			variant: 'buttons.md',
-		}}
-	>
-		Button
-	</ButtonOutline>
-)
-export const ButtonOutlineSmall = (props) => (
-	<ButtonOutline
-		{...props}
-		sx={{
-			variant: 'buttons.sm',
-		}}
-	>
-		Button
-	</ButtonOutline>
-)
+const Template = (args) => <ButtonOutline {...args}/>;
+
+export const Large = Template.bind({});
+	Large.args = {
+		buttonVariant: 'buttons.lg'
+	};
+
+	export const Medium = Template.bind({});
+	Medium.args = {
+		buttonVariant: 'buttons.md'
+	};
+	export const Small = Template.bind({});
+	Small.args = {
+		buttonVariant: 'buttons.sm'
+	};
+

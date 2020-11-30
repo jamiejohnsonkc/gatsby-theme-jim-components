@@ -6,7 +6,15 @@ import React from 'react'
 //TODO confirm button style functionality (button, outline, pill, pill outline)
 //TODO Test button functionality - how to handle internal vs external button links(?)
 
-const SysButton = ({ buttonChild, variant = 'buttons.basic', ...props }) => (
+const SysButton = ({
+    buttonChild,
+    variant = 'buttons.basic',
+    bg,
+    border,
+    borderColor,
+    borderRadius,
+    ...props
+}) => (
     <Button
         className="sysButton"
         {...props}

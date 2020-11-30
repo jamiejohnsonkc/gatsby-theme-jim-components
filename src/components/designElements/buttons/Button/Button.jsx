@@ -6,7 +6,14 @@ import SysButton from '../../../system/atoms/SysButton/SysButton'
 
 // TODO ensure props are consistent across buttons
 
-const Button = ({ color, bg, buttonChild, buttonVariant, ...props }) => (
+const Button = ({
+    color,
+    bg,
+    buttonChild,
+    buttonVariant,
+    altVariant,
+    ...props
+}) => (
     <SysButton
         {...props}
         // variant={buttonVariant}

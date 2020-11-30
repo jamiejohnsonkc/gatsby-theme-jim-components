@@ -9,7 +9,7 @@ const StyledParagraph = styled.p``
 
 //TODO Refactor like caption?
 
-const Paragraph = ({ paragraphContainer, ...props }) => (
+const Paragraph = ({ paragraphContainer, paragraph, ...props }) => (
     <StyledParagraph
         {...props}
         sx={{
@@ -19,7 +19,7 @@ const Paragraph = ({ paragraphContainer, ...props }) => (
         <Text
             {...props}
             sx={{
-                variant: 'paragraphText',
+                variant: `${paragraph}`,
             }}
         >
             {props.children}
@@ -27,8 +27,15 @@ const Paragraph = ({ paragraphContainer, ...props }) => (
     </StyledParagraph>
 )
 
-Paragraph.propTypes = {}
+Paragraph.propTypes = {
+    variant: PropTypes.string,
+    children: PropTypes.string,
+}
 
-Paragraph.defaultProps = {}
+Paragraph.defaultProps = {
+    children:
+        'Body copy is used to explain and support your claims and positioning. Commodo incididunt qui cupidatat qui aliqua voluptate veniam pariatur exercitation eu. Duis culpa fugiat occaecat cupidatat qui mollit cupidatat duis eu magna occaecat ad. Proident tempor aliqua labore sunt laborum ipsum dolore deserunt culpa Lorem labore non eu.',
+    variant: 'text.p_md',
+}
 
 export default Paragraph

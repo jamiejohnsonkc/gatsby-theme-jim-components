@@ -8,7 +8,6 @@ import React from 'react'
 
 const HoverTextFill = (props) => (
     <Box
-        className={props.className}
         {...props}
         sx={{
             position: 'relative',
@@ -51,7 +50,7 @@ HoverTextFill.propTypes = {
 }
 
 HoverTextFill.defaultProps = {
-    children: 'default text',
+    children: 'Hover Fill Text',
     className: 'className',
 }
 

@@ -1,17 +1,28 @@
 /** @jsx jsx */
 import { jsx, Text } from 'theme-ui'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-//TODO Refactor like caption?
-const Display = (props) => (
+const Display = ({ variant = 'display', ...props }) => (
     <Text
         {...props}
-        // as={as}
         sx={{
-            variant: 'display',
+            variant: `${variant}`,
         }}
-        children={props.children}
-    />
+    >
+        {props.children}
+    </Text>
 )
+
+Display.propTypes = {
+    variant: PropTypes.string,
+    children: PropTypes.string,
+}
+
+Display.defaultProps = {
+    children:
+        'Display text for summarizing and calling attention to supportive messages within long-form content.',
+    variant: 'd1',
+}
 
 export default Display

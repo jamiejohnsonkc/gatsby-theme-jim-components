@@ -4,13 +4,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SysButton from '../../../system/atoms/SysButton'
 
-const Pill = ({ color, bg, buttonChild, buttonVariant, ...props }) => (
+const Pill = ({ color, bg, buttonChild, buttonVariant, border, ...props }) => (
     <>
         <SysButton
             {...props}
             sx={{
                 color,
                 bg,
+                border,
                 variant: `${buttonVariant}`,
                 borderRadius: '3em',
                 '& > a': {
