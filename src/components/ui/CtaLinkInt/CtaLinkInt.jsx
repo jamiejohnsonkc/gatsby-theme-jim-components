@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { jsx, Text, Box } from 'theme-ui'
 import React from 'react'
 import { ImArrowUpRight } from 'react-icons/im'
-import AnchorLink from '../AnchorLink'
+import AnchorLink from '../../primitives/AnchorLink'
 
 const CtaLinkInt = ({ linkTo, linkText, linkArt, color, ...props }) => (
     <>

@@ -4,7 +4,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
-import ExtLink from '../../ui/ExtLink'
+import ExtLink from '../../primitives/ExtLink'
 // import FpoStaticAstronaut from '../../../../utilities/fpo/FpoImages/FpoStaticAstronaut/FpoStaticAstronaut'
 
 // TODO fix props to enable nested styles

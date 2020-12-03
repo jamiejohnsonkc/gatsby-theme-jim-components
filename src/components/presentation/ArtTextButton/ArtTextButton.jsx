@@ -23,7 +23,7 @@ ArtTextButton.propTypes = {
 
 ArtTextButton.defaultProps = {
     icon: <Glyph />,
-    buttonContent: <Button />,
+    buttonContent: <Button variant="buttons.md" />,
     textText:
         'Loren sump dolor sit mate, wist intelligent tied, acquit per sues rip ides emu in. Romanesque foreordains xiv, toll it parted mes no.',
 }

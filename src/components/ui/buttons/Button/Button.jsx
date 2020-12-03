@@ -7,34 +7,42 @@ import SysButton from '../../../primitives/SysButton/SysButton'
 // TODO ensure props are consistent across buttons
 
 const Button = ({
-    color,
-    bg,
+    buttonVariant = 'primary',
     buttonChild,
-    buttonVariant,
-    altVariant,
+    buttonType,
+    bg,
+    color,
+    border,
+    borderRadius,
+    buttonRadius,
     ...props
 }) => (
-    <SysButton
+    <button
         {...props}
-        // variant={buttonVariant}
+        type={buttonType}
         sx={{
-            color,
             bg,
-            borderRadius: 4,
+            color,
+            border,
+            borderRadius: `${buttonRadius}`,
             variant: `${buttonVariant}`,
         }}
     >
         {buttonChild}
-    </SysButton>
+    </button>
 )
 
 Button.propTypes = {
     // buttonVariant: PropTypes.string,
     buttonChild: PropTypes.string,
+    buttonRadius: PropTypes.string,
+    buttonVariant: PropTypes.string,
 }
 
 Button.defaultProps = {
     buttonChild: 'button',
+    buttonRadius: 'rounded',
+    buttonVariant: 'buttons.primaryLg',
     // buttonVariant: 'buttons.lg',
 }
 

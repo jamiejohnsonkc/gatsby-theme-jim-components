@@ -13,11 +13,12 @@ const SysButton = ({
     border,
     borderColor,
     borderRadius,
+    buttonType,
     ...props
 }) => (
     <Button
         className="sysButton"
-        type="button"
+        type={buttonType}
         {...props}
         sx={{
             variant: `buttons.${variant}`,
@@ -27,8 +28,10 @@ const SysButton = ({
 
 SysButton.propTypes = {
     variant: PropTypes.string,
+    buttonType: PropTypes.string,
 }
 
-// SysButton.defaultProps = {
-// }
+SysButton.defaultProps = {
+    buttonType: 'button',
+}
 export default SysButton

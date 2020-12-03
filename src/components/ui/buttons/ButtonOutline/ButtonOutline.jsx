@@ -12,6 +12,7 @@ const ButtonOutline = ({
     bg,
     buttonVariant,
     buttonChild,
+    buttonType,
     ...props
 }) => (
     <Button

@@ -4,7 +4,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import Button from '../../ui/buttons/Button'
-import AnchorLink from '../../ui/AnchorLink'
+import AnchorLink from '../../primitives/AnchorLink'
 
 // TODO refactor props
 
@@ -63,7 +63,7 @@ TextLink.defaultProps = {
     boxPx: 4,
     boxPy: 4,
     boxBg: 'transparent',
-    linkComponent: <AnchorLink to="/">TestAnchorLink</AnchorLink>,
+    linkComponent: <AnchorLink linkTo="/">TestAnchorLink</AnchorLink>,
 }
 
 export default TextLink
