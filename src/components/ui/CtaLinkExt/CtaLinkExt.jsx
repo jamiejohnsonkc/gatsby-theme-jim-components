@@ -7,7 +7,7 @@ import { ImArrowUpRight } from 'react-icons/im'
 const CtaLinkExt = ({
     linkTo,
     linkText,
-    linkVisual,
+    linkArt,
     className,
     color,
     width,
@@ -45,12 +45,12 @@ const CtaLinkExt = ({
             </Text>
             <Box
                 {...props}
-                className="linkVisual"
+                className="linkArt"
                 sx={{
                     display: 'inline-block',
                 }}
             >
-                {linkVisual}
+                {linkArt}
             </Box>
         </Link>
     </>
@@ -60,13 +60,13 @@ CtaLinkExt.propTypes = {
     className: PropTypes.string,
     iconColor: PropTypes.string,
     iconMarginLeft: PropTypes.string,
-    linkVisual: PropTypes.any,
+    linkArt: PropTypes.any,
     linkText: PropTypes.string,
     linkTo: PropTypes.string,
 }
 
 CtaLinkExt.defaultProps = {
-    linkVisual: <ImArrowUpRight />,
+    linkArt: <ImArrowUpRight />,
     className: 'ctaLink',
     linkText: 'CtaLink',
     linkTo: '/',

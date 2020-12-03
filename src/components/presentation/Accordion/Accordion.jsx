@@ -1,30 +1,30 @@
 /** @jsx jsx */
-import { useState } from 'react'
-// import './styles.css'
-import { GoChevronDown } from 'react-icons/go'
-import { Box, jsx } from 'theme-ui'
-import Data from '../sampleData'
-import Span from '../../../../primitives/Span'
-import LabeledProgressBar from '../../../../presentation/LabeledProgressBar'
-// import { FaRegIdBadge } from 'react-icons/fa'
-import GroupGrid from '../GroupGrid/GroupGrid'
-import GroupHead from '../GroupHead'
-import ProgressBarGroup from '../ProgressBarGroup'
+import { jsx, Box, Text } from 'theme-ui'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
-// import animation from '../../../../../../../gatsby-theme-scroll-reveal/animation'
-// animation
-const ProgBarGrpAccdn = (props) => {
+import { GoChevronDown } from 'react-icons/go'
+import GroupGrid from '../../system/organisms/progBars/GroupGrid'
+import GroupHead from '../../system/organisms/progBars/GroupHead'
+import ProgressBarGroup from '../../system/organisms/progBars/ProgressBarGroup'
+import LabeledProgressBar from '../LabeledProgressBar'
+import Data from '../../system/organisms/progBars/sampleData'
+import Span from '../../primitives/Span/Span'
+
+// TODO Refactor styles & components as skeleton accordion container
+
+const Accordion = (props) => {
     return (
         <Box
             className="accordionContainer"
             {...props}
             sx={{
                 width: '100%',
-                display: ['grid', 'grid', 'none', 'none', 'none', 'none'],
+                display: 'grid',
                 justifyContent: 'center',
                 alignItems: 'center',
+                background: 'rgba(57, 120, 239, 0.16)',
                 gridTemplateColumns: '1fr',
-                marginBottom: 6,
             }}
         >
             <Box
@@ -32,11 +32,11 @@ const ProgBarGrpAccdn = (props) => {
                 {...props}
                 sx={{
                     width: '100%',
-                    px: [0, 0, 0, 0, 0],
+                    px: [0, 4, 0, 0, 0],
                 }}
             >
                 <ul
-                    className="accordionList"
+                    className="accordion-list"
                     {...props}
                     sx={{
                         width: '100%',
@@ -88,91 +88,54 @@ const AccordionItem = ({
 
     return (
         <Box
-            className={`accordionItem ${isOpen ? 'accordionItemOpened' : ''}`}
+            className={`accordion-item ${
+                isOpen ? 'accordion-item--opened' : ''
+            }`}
             onClick={() => setOpen(!isOpen)}
-            {...props}
-            sx={{
-                overflow: 'hidden',
-                transition: 'max-height 0.75s ease-in-out .1s',
-                height: 'auto',
-                maxHeight: '9999px',
-            }}
         >
-            {/* <h3 {...{ className: 'accordionItem__title' }}>{title}</h3> */}
+            {/* <h3 {...{ className: 'accordion-item__title' }}>{title}</h3> */}
             <Box
-                className="accordionToggle"
+                className="accordion-item__line"
                 {...props}
                 sx={{
+                    // transition: 'all .2s ease-in-out .2s',
+
                     display: 'grid',
                     gridTemplateColumns: '11fr 1fr',
                     justifyContent: 'spaceBetween',
                     alignItems: 'center',
-                    // backgroundColor: '#fff',
+                    backgroundColor: '#fff',
                     zIndex: '2',
                     position: 'relative',
                     // py: `${isOpen ? 4 : 4}`,
                     py: 4,
-                    px: [4, 4, 4, 4, 4, 4],
+                    px: [4, 4, 4, 4, 4],
                     // py: `${isOpen ? 4 : ''}`,
                     mb: `${isOpen ? 4 : 0}`,
-                    backgroundColor: `${isOpen ? 'primaryDark' : '#fff'}`,
+                    backgroundColor: `${isOpen ? 'muted' : ''}`,
                     boxShadow: `${isOpen ? 'uiDivide' : ''}`,
                     color: `${isOpen ? 'revText' : 'text'}`,
-                    transition: 'all .75s ease-in-out .3s',
+                    transition: 'all .2s ease-in-out .2s',
                     willChange:
                         'color, boxShadow, p, marginBottom, backgroundColor',
                 }}
             >
-                <GroupHead
-                    key={groupId}
-                    groupHead={group.groupHead}
-                    sx={{
-                        color: `${isOpen ? 'revText' : 'text'}`,
-                        transition: 'color .75s ease-in-out .1s',
-                    }}
-                />
+                <GroupHead key={groupId} groupHead={group.groupHead} />
 
                 <Span
-                    className="accordionItemIcon"
+                    className="accordion-item__icon"
                     {...props}
                     sx={{
                         display: 'grid',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        transition: 'transform 0.75s ease-in-out .1s',
-                        width: [
-                            '1.25em',
-                            '1.5em',
-                            '1.25em',
-                            '1.25em',
-                            '1.25em',
-                        ],
-                        height: [
-                            '1.25em',
-                            '1.5em',
-                            '1.25em',
-                            '1.25em',
-                            '1.25em',
-                        ],
+                        transition: 'transform 0.3s ease-in-out',
+                        width: '1.25em',
+                        height: '1.25em',
                         transform: `${isOpen ? 'rotate(180deg)' : ''}`,
-
                         '& > svg': {
                             stroke: `${isOpen ? 'muted' : 'revText'}`,
                             opacity: '0.6',
-                            width: [
-                                '1.25em',
-                                '1.5em',
-                                '1.25em',
-                                '1.25em',
-                                '1.25em',
-                            ],
-                            height: [
-                                '1.25em',
-                                '1.5em',
-                                '1.25em',
-                                '1.25em',
-                                '1.25em',
-                            ],
                         },
                     }}
                 >
@@ -180,41 +143,41 @@ const AccordionItem = ({
                 </Span>
             </Box>
             <Box
-                className="accordionItemInner"
+                className="accordion-item__inner"
                 {...props}
                 sx={{
                     px: [4, 4, 4, 4, 4],
                     maxHeight: `${isOpen ? '200em' : '0'}`,
-                    willChange: 'max-height',
-                    transition: 'max-height .75s ease-in-out .3s',
                     overflow: 'hidden',
-                    // textTransform: 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
-                    // transitionDuration: '0.5s',
-                    // transitionProperty: 'max-height',
+                    textTransform: 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+                    transitionDuration: '0.5s',
+                    transitionProperty: 'max-height',
                     zIndex: '1',
                     position: 'relative',
-                    // transitionTimingFunction: `${
-                    // 	isOpen ? 'cubic-bezier(0.895, 0.03, 0.685, 0.22)' : ''
-                    // }`,
-                    // transitionDuration: `${isOpen ? '0.5s' : '0.5s'}`,
-                    // transitionProperty: `${isOpen ? 'max-height' : ''}`,
+                    transitionTimingFunction: `${
+                        isOpen ? 'cubic-bezier(0.895, 0.03, 0.685, 0.22)' : ''
+                    }`,
+                    transitionDuration: `${isOpen ? '0.5s' : ''}`,
+                    transitionProperty: `${isOpen ? 'max-height' : ''}`,
                 }}
             >
                 <Box
-                    className="accordionItemContent"
+                    className="accordion-item__content"
                     {...props}
                     sx={{
                         // transform: 'translateY(-2em)',
                         opacity: `${isOpen ? '1' : '0'}`,
-                        transition:
-                            'opacity .75s ease-in-out .1s, transform .75s ease-in-out .1s',
                         transform: `${
                             isOpen ? 'translateY(0)' : 'translateY(-2em)'
                         }`,
-                        // transitionDelay: `${isOpen ? '0.5s' : '0.5s'}`,
-                        // transitionTimingFunction: `${isOpen ? 'ease-in-out' : ''}`,
-                        // transitionDuration: `${isOpen ? '0.5s' : '0.5s'}`,
-                        // transitionProperty: `${isOpen ? 'opacity, transform' : ''}`,
+                        transitionDelay: `${isOpen ? '0.2s' : '0.5s'}`,
+                        transitionTimingFunction: `${
+                            isOpen ? 'ease-in-out' : ''
+                        }`,
+                        transitionDuration: `${isOpen ? '0.2s' : '0.1s'}`,
+                        transitionProperty: `${
+                            isOpen ? 'opacity, transform' : ''
+                        }`,
                     }}
                 >
                     <GroupGrid groupGridColumns={group.groupGridColumns}>
@@ -243,8 +206,8 @@ const AccordionItem = ({
     )
 }
 
-ProgBarGrpAccdn.propTypes = {}
+Accordion.propTypes = {}
 
-ProgBarGrpAccdn.defaultProps = {}
+Accordion.defaultProps = {}
 
-export default ProgBarGrpAccdn
+export default Accordion

@@ -5,7 +5,7 @@ import React from 'react'
 import { ImArrowUpRight } from 'react-icons/im'
 import AnchorLink from '../AnchorLink'
 
-const CtaLinkInt = ({ linkTo, linkText, linkVisual, color, ...props }) => (
+const CtaLinkInt = ({ linkTo, linkText, linkArt, color, ...props }) => (
     <>
         <AnchorLink
             linkTo={linkTo}
@@ -40,12 +40,12 @@ const CtaLinkInt = ({ linkTo, linkText, linkVisual, color, ...props }) => (
             </Text>
             <Box
                 {...props}
-                className="linkVisual"
+                className="linkArt"
                 sx={{
                     display: 'inline-block',
                 }}
             >
-                {linkVisual}
+                {linkArt}
             </Box>
         </AnchorLink>
     </>
@@ -55,7 +55,7 @@ CtaLinkInt.propTypes = {
     className: PropTypes.any,
     iconColor: PropTypes.any,
     iconMarginLeft: PropTypes.any,
-    linkVisual: PropTypes.any,
+    linkArt: PropTypes.any,
     linkText: PropTypes.any,
     linkTo: PropTypes.any,
 }
@@ -69,7 +69,7 @@ CtaLinkInt.defaultProps = {
     // color: 'text',
     // linkTo: '/',
     // linkText: 'Link',
-    linkVisual: <ImArrowUpRight />,
+    linkArt: <ImArrowUpRight />,
     // iconSize: '.5em',
     // iconColor: 'primary',
     // iconMarginLeft: 1,

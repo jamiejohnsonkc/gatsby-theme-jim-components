@@ -25,8 +25,8 @@ AnchorLink.propTypes = {
 }
 
 AnchorLink.defaultProps = {
-    linkTo: '/',
-    children: 'AnchorLink',
+    // linkTo: '/',
+    // children: 'AnchorLink',
 }
 
 export default AnchorLink

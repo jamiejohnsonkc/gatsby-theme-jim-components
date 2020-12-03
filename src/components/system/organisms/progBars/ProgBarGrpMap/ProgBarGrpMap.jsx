@@ -6,7 +6,7 @@ import GroupGrid from '../GroupGrid/GroupGrid'
 import GroupHead from '../GroupHead/GroupHead'
 import ProgressBarGroup from '../ProgressBarGroup/ProgressBarGroup'
 import Data from '../sampleData'
-import LabeledProgressBar from '../../LabeledProgressBar'
+import LabeledProgressBar from '../../../../presentation/LabeledProgressBar'
 
 const ProgBarGrpMap = ({
     groupGridColumns,
