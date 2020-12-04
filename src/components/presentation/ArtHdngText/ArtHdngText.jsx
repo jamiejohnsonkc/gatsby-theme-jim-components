@@ -1,97 +1,115 @@
 /** @jsx jsx */
 import PropTypes from 'prop-types'
+import React from 'react'
 import { Box, Heading, jsx, Text } from 'theme-ui'
 import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
 
 // todo refactor
 const ArtHdngText = ({
-    blockStyle,
-    blockDisplay,
-    blockWidth,
-    visualHeight,
-    visualWidth,
-    visualMb,
-    visual,
+    artArt,
+    artMb,
+    boxBg,
+    boxPx,
+    boxPy,
+    boxWidth,
+    headingMb,
+    headingHeading,
     headingVariant,
+    boxClassName,
+    headingClassName,
     headingAs,
-    headingText,
-    textVariant,
+    artClassName,
+    textClassName,
+    textMb,
     textText,
+    textVariant,
+    artHeight,
+    artWidth,
     ...props
 }) => (
-    <Box
-        {...props}
-        style={blockStyle}
-        sx={{
-            width: `${blockWidth}`,
-            display: `${blockDisplay}`,
-        }}
-        className="block"
-    >
+    <>
         <Box
-            className="visual"
+            classname={boxClassName}
             {...props}
             sx={{
-                height: `${visualHeight}`,
-                width: `${visualWidth}`,
-                marginBottom: `${visualMb}`,
+                px: `${boxPx}`,
+                py: `${boxPy}`,
+                bg: `${boxBg}`,
+                width: `${boxWidth}`,
             }}
         >
-            {visual}
+            <Box
+                classname={artClassName}
+                {...props}
+                sx={{
+                    mb: `${artMb}`,
+                    height: `${artHeight}`,
+                    width: `${artWidth}`,
+                }}
+            >
+                {artArt}
+            </Box>
+            <Heading
+                classname={headingClassName}
+                as={headingAs}
+                {...props}
+                sx={{
+                    variant: `${headingVariant}`,
+                    mb: `${headingMb}`,
+                }}
+            >
+                {headingHeading}
+            </Heading>
+            <Text
+                classname={textClassName}
+                {...props}
+                sx={{
+                    variant: `${textVariant}`,
+                    mb: `${textMb}`,
+                }}
+            >
+                {textText}
+            </Text>
         </Box>
-
-        <Heading
-            {...props}
-            className="heading"
-            as={headingAs}
-            sx={{
-                variant: `${headingVariant}`,
-                pr: 2,
-            }}
-        >
-            {headingText}
-        </Heading>
-        <Text
-            {...props}
-            className="text"
-            sx={{
-                variant: `${textVariant}`,
-            }}
-        >
-            {textText}
-        </Text>
-    </Box>
+    </>
 )
 
 ArtHdngText.propTypes = {
-    blockWidth: PropTypes.string,
-    visual: PropTypes.any,
-    headingText: PropTypes.string,
+    artArt: PropTypes.any,
+    artClassName: PropTypes.any,
+    artHeight: PropTypes.any,
+    artMb: PropTypes.number,
+    artWidth: PropTypes.any,
+    boxBg: PropTypes.any,
+    boxClassName: PropTypes.any,
+    boxPx: PropTypes.number,
+    boxPy: PropTypes.number,
+    boxWidth: PropTypes.any,
+    headingAs: PropTypes.any,
+    headingClassName: PropTypes.any,
+    headingHeading: PropTypes.string,
+    headingMb: PropTypes.number,
     headingVariant: PropTypes.string,
+    textClassName: PropTypes.any,
+    textMb: PropTypes.number,
     textText: PropTypes.string,
     textVariant: PropTypes.string,
-    visualHeight: PropTypes.string,
-    visualMb: PropTypes.number,
-    visualWidth: PropTypes.string,
-    headingAs: PropTypes.string,
-    blockDisplay: PropTypes.string,
-    blockStyle: PropTypes.string,
 }
 
 ArtHdngText.defaultProps = {
-    blockWidth: '100%',
-    visual: <FpoImageWireFrame />,
-    visualHeight: '10em',
-    visualWidth: '3em',
-    visualMb: 4,
-    headingText: 'Romanesque foreordains xiv',
-    headingVariant: 'h3',
+    artArt: <FpoImageWireFrame />,
+    artMb: 4,
+    artHeight: '12em',
+    boxPx: 4,
+    boxPy: 4,
+    boxWidth: '40em',
+    headingMb: 4,
+    headingVariant: 'styles.h3',
+    textMb: 4,
+    headingHeading: 'Loren sump dolor sit mate',
     textText:
-        'Loren sump dolor sit meat, it sumo, facet constitute re es. Est ponder um expedients cu, veil ex quid dictum momentum.',
-    textVariant: 'text_lg',
-    headingAs: 'h3',
-    blockDisplay: 'flex',
-    blockStyle: 'flex: `1 0 auto`',
+        'Loren sump dolor sit mate, wist intelligent tied, acquit per sues rip ides emu in. Romanesque foreordains xiv, toll it parted mes no.',
+    textVariant: 'text.text_md',
 }
 
 export default ArtHdngText

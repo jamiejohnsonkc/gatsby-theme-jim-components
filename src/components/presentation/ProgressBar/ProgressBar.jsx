@@ -4,13 +4,12 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 // import useStyle from '../../../../../hooks/useStyle'
 
-const progressBarBorderRadius = {
-    borderRadius: `${barBorderRadius}`,
-}
+//TODO relax on the props yo
 
-export const ProgressBar = ({
+const ProgressBar = ({
     done,
     level,
+    progressBarBorderRadius,
     progressBarBgColor,
     progressBarMargin,
     progressBarHeight,
@@ -23,6 +22,7 @@ export const ProgressBar = ({
     progressBarTransition,
     progressBarOverlayFontFamily,
     progressBarOverlayFontSize,
+    progressBarBarHeight,
     ...props
 }) => {
     const [style, setStyle] = useState({})
@@ -58,7 +58,7 @@ export const ProgressBar = ({
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    height: '100%',
+                    height: `${progressBarBarHeight}`,
                     borderRadius: `${progressBarBorderRadius}`,
                     backgroundColor: `${progressBarBarColor}`,
                     boxShadow: `${progressBarShadow}`,
@@ -77,30 +77,32 @@ export const ProgressBar = ({
 }
 
 ProgressBar.propTypes = {
-    done: PropTypes.string,
+    done: PropTypes.number,
     level: PropTypes.string,
     progressBarBarColor: PropTypes.string,
     progressBarBgColor: PropTypes.string,
-    progressBarBgOpacity: PropTypes.string,
+    progressBarBgOpacity: PropTypes.any,
     progressBarHeight: PropTypes.string,
     progressBarMargin: PropTypes.string,
     progressBarOpacity: PropTypes.any,
+    progressBarBorderRadius: PropTypes.any,
     progressBarOverlayFontFamily: PropTypes.string,
     progressBarOverlayFontSize: PropTypes.string,
     progressBarOverlayTextColor: PropTypes.string,
     progressBarShadow: PropTypes.string,
     progressBarTransition: PropTypes.string,
     progressBarWidth: PropTypes.string,
+    progressBarBarHeight: PropTypes.string,
 }
 
 ProgressBar.defaultProps = {
-    done: '50%',
-    level: 'novice',
     progressBarBgColor: 'overlay2',
+    progressBarBorderRadius: '10px',
     progressBarMargin: '8px 0',
     progressBarHeight: '6px',
-    progressBarBgOpacity: '0.9',
-    progressBarBarColor: 'color',
+    progressBarBarHeight: '6px',
+    progressBarBgOpacity: 0.9,
+    progressBarBarColor: 'primary',
     progressBarShadow: '0 3px 3px -5px #c5c5c5, 0 2px 5px #a7a7a7',
     progressBarOverlayTextColor: 'text',
     progressBarWidth: '80%',

@@ -1,86 +1,99 @@
 /** @jsx jsx */
 import { jsx, Text, Box } from 'theme-ui'
 import React from 'react'
-
 import PropTypes from 'prop-types'
 import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
-import ExtLink from '../../primitives/ExtLink'
-// import FpoStaticAstronaut from '../../../../utilities/fpo/FpoImages/FpoStaticAstronaut/FpoStaticAstronaut'
+import AnchorLink from '../../primitives/AnchorLink'
 
 // TODO fix props to enable nested styles
 
 const ArtTextLink = ({
+    boxWidth,
     textAlign,
-    blockWidth,
-    imageHeight,
-    imageWidth,
-    imageMb,
-    compImage,
+    artHeight,
+    artWidth,
+    boxPx,
+    boxPy,
+    boxBg,
+    artMb,
+    artArt,
     textVariant,
     textMb,
     textText,
+    linkLink,
+    boxClassName,
+    artClassName,
+    textClassName,
     ...props
 }) => (
     <Box
         {...props}
+        classname={boxClassName}
         sx={{
-            width: `${blockWidth}`,
+            px: `${boxPx}`,
+            py: `${boxPy}`,
+            bg: `${boxBg}`,
+            width: `${boxWidth}`,
         }}
-        className="className"
     >
         <Box
-            className="imageContainer"
+            classname={artClassName}
             {...props}
             sx={{
-                height: `${imageHeight}`,
-                width: `${imageWidth}`,
-                marginBottom: `${imageMb}`,
+                mb: `${artMb}`,
+                height: `${artHeight}`,
+                width: `${artWidth}`,
             }}
         >
-            {compImage}
+            {artArt}
         </Box>
         <Text
             {...props}
-            className="blockText"
+            classname={textClassName}
             sx={{
-                textAlign,
                 variant: `${textVariant}`,
+                textAlign,
                 marginBottom: `${textMb}`,
             }}
         >
             {textText}
         </Text>
-        {link}
+        {linkLink}
     </Box>
 )
 
 ArtTextLink.propTypes = {
-    blockWidth: PropTypes.string,
-    extLinkText: PropTypes.string,
-    extLinkTo: PropTypes.string,
+    artArt: PropTypes.any,
+    artClassName: PropTypes.any,
+    artHeight: PropTypes.string,
+    artMb: PropTypes.number,
+    artWidth: PropTypes.string,
+    boxBg: PropTypes.any,
+    boxClassName: PropTypes.any,
+    boxPx: PropTypes.any,
+    boxPy: PropTypes.any,
+    boxWidth: PropTypes.string,
     buttonVariant: PropTypes.string,
-    compImage: PropTypes.any,
-    imageHeight: PropTypes.string,
-    imageMb: PropTypes.string,
-    imageWidth: PropTypes.string,
+    linkLink: PropTypes.any,
+    textAlign: PropTypes.any,
+    textClassName: PropTypes.any,
     textMb: PropTypes.number,
     textText: PropTypes.string,
     textVariant: PropTypes.string,
 }
 
 ArtTextLink.defaultProps = {
-    blockWidth: '40em',
-    extLinkText: 'See More on LinkedIn',
-    extLinkTo: '/',
+    boxWidth: '40em',
     buttonVariant: 'buttons.lg',
-    compImage: <FpoImageWireFrame />,
-    imageHeight: '10em',
-    imageMb: 4,
-    imageWidth: '100%',
+    artArt: <FpoImageWireFrame />,
+    artHeight: '12em',
+    artMb: 4,
+    artWidth: '100%',
     textMb: 4,
     textText:
         'Text lg lorem ea aliqua adipisicing ex sunt culpa in. Nisi ut veniam pariatur ullamco sint magna eu id sint voluptate ullamco laboris.',
     textVariant: 'text.text_lg',
+    linkLink: <AnchorLink />,
 }
 
 export default ArtTextLink

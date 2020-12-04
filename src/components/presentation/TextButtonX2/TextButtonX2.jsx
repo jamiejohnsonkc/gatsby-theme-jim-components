@@ -63,10 +63,10 @@ TextButtonX2.propTypes = {
 TextButtonX2.defaultProps = {
     button2Text: 'Button2',
     button2To: '/',
-    button2Variant: 'buttons.lg',
+    button2Variant: 'buttons.primaryLg',
     buttonText: 'Button',
     buttonTo: '/',
-    buttonVariant: 'buttons.lg',
+    buttonVariant: 'buttons.primaryLg',
     textText:
         'Text lg lorem ea aliqua adipisicing ex sunt culpa in. Nisi ut veniam pariatur ullamco sint magna eu id sint voluptate ullamco laboris. Ex nostrud tempor pariatur commodo exercitation enim duis nulla. Commodo aliqua dolor qui reprehenderit quis reprehenderit veniam voluptate nulla culpa nisi.',
     textVariant: 'text.text_lg',

@@ -4,11 +4,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-// const linkTest = {
-
-// }
-
-//TODO refactor for mapping
+// TODO refactor for mapping
 
 const IconbarWrapper = (props) => (
     <Box

@@ -2,7 +2,7 @@ import React from 'react'
 import ArtHdngText from './ArtHdngText'
 
 export default {
-	title: 'Content Blocks/Art, heading, text',
+	title: 'Content Blocks/ArtHeadingText',
 }
 
 export const standard = () => <ArtHdngText />

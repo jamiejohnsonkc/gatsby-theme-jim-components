@@ -6,37 +6,46 @@ import PropTypes from 'prop-types'
 import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
 
 const ArtText = ({
-    blockWidth,
-    imageHeight,
-    imageWidth,
-    imageMb,
-    compImage,
+    boxPx,
+    boxPy,
+    boxBg,
+    boxWidth,
+    artHeight,
+    artWidth,
+    artMb,
+    artArt,
     textVariant,
     textMb,
     textText,
+    boxClassName,
+    artClassName,
+    textClassName,
     ...props
 }) => (
     <Box
         {...props}
+        classname={boxClassName}
         sx={{
-            width: `${blockWidth}`,
+            px: `${boxPx}`,
+            py: `${boxPy}`,
+            bg: `${boxBg}`,
+            width: `${boxWidth}`,
         }}
-        className="className"
     >
         <Box
-            className="imageContainer"
+            classname={artClassName}
             {...props}
             sx={{
-                height: `${imageHeight}`,
-                width: `${imageWidth}`,
-                marginBottom: `${imageMb}`,
+                mb: `${artMb}`,
+                height: `${artHeight}`,
+                width: `${artWidth}`,
             }}
         >
-            {compImage}
+            {artArt}
         </Box>
         <Text
             {...props}
-            className="blockText"
+            classname={textClassName}
             sx={{
                 variant: `${textVariant}`,
                 mb: `${textMb}`,
@@ -48,22 +57,28 @@ const ArtText = ({
 )
 
 ArtText.propTypes = {
-    blockWidth: PropTypes.string,
-    compImage: PropTypes.any,
-    imageHeight: PropTypes.string,
-    imageMb: PropTypes.number,
-    imageWidth: PropTypes.string,
+    artArt: PropTypes.any,
+    artClassName: PropTypes.any,
+    artHeight: PropTypes.string,
+    artMb: PropTypes.number,
+    artWidth: PropTypes.string,
+    boxBg: PropTypes.any,
+    boxClassName: PropTypes.any,
+    boxPx: PropTypes.any,
+    boxPy: PropTypes.any,
+    boxWidth: PropTypes.string,
+    textClassName: PropTypes.any,
     textMb: PropTypes.number,
     textText: PropTypes.string,
     textVariant: PropTypes.string,
 }
 
 ArtText.defaultProps = {
-    blockWidth: '40em',
-    compImage: <FpoImageWireFrame />,
-    imageHeight: '10em',
-    imageMb: 4,
-    imageWidth: '100%',
+    boxWidth: '40em',
+    artArt: <FpoImageWireFrame />,
+    artHeight: '12em',
+    artMb: 4,
+    artWidth: '100%',
     textMb: 4,
     textText:
         'Text lg lorem ea aliqua adipisicing ex sunt culpa in. Nisi ut veniam pariatur ullamco sint magna eu id sint voluptate ullamco laboris.',

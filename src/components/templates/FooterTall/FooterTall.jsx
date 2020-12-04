@@ -2,7 +2,7 @@
 import { jsx, Grid, Box, Text, Container } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
-import IconsBar from '../../presentation/IconsBar/IconsBar'
+import IconsBar from '../../containers/IconsBar/IconsBar'
 
 const IconsBarStyle = {
     verticalAlign: 'middle',
