@@ -2,7 +2,7 @@ import React from 'react'
 import IconWrapper from './IconWrapper'
 
 export default {
-  title: 'Containers/IconWrapper',
+  title: 'Layout/IconWrapper',
 }
 
 export const standard = () => <IconWrapper />

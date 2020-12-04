@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import Button from './Button'
 
 export default {
-    title: 'Design Elements/Buttons/Button',
+    title: 'Ui/Controls/Button',
     component: Button,
     argTypes: {
         buttonChild: { control: 'text' },

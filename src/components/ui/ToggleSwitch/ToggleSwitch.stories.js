@@ -4,7 +4,7 @@ import React from 'react'
 import ToggleSwitch from './ToggleSwitch'
 
 export default {
-	title: 'Design Elements/Inputs/ToggleSwitch',
+	title: 'Ui/Inputs/ToggleSwitch',
 }
 
 export const standard = () => (

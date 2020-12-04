@@ -1,4 +1,4 @@
-import FpoImageWireFrame from '../../../utilities/fpo/FpoImageWireFrame'
+import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame'
 import Caption from './Caption'
 
 export default {

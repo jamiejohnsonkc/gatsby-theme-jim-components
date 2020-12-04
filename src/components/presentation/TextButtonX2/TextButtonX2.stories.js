@@ -1,5 +1,5 @@
 import React from 'react'
-import * as ButtonStories from '../../ui/buttons/Button/Button.stories'
+import * as ButtonStories from '../../ui/Button/Button.stories'
 import TextButtonX2 from './TextButtonX2'
 
 export default {

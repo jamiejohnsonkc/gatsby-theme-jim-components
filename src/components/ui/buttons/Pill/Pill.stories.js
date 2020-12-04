@@ -4,7 +4,7 @@ import Pill from './Pill'
 
 
 export default {
-	title: 'Design Elements/Buttons/Pill',
+	title: 'Ui/Buttons/Pill',
 	component: Pill,
 	argTypes: {
 		backgroundColor: {control: 'color'},

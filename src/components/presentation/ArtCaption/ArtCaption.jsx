@@ -4,7 +4,7 @@ import { jsx, Box } from 'theme-ui'
 import React from 'react'
 
 import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
-import Caption from '../../ui/Text/Caption'
+import Caption from '../../text/Caption'
 
 const ArtCaption = ({
     blockWidth,

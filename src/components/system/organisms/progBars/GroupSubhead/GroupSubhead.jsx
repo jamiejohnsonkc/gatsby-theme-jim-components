@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import React from 'react'
 // import animation from '../../../../../../gatsby-theme-scroll-reveal/animation.js'
 import PropTypes from 'prop-types'
-import Subline from '../../../../ui/Text/Subline'
+import Subline from '../../../../text/Subline'
 
 const GroupSubhead = ({ groupSubhead, ...props }) => (
     <Subline

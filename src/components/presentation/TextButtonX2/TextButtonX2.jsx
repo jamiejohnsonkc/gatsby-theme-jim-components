@@ -2,7 +2,7 @@
 import { jsx, Text } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from '../../ui/buttons/Button'
+import Button from '../../ui/Button'
 
 // TODO refactor for reuse
 

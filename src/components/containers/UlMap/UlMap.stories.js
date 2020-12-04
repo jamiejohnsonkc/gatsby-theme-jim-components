@@ -6,7 +6,7 @@ import Li from '../../primitives/Li'
 import PropTypes from 'prop-types'
 
 export default {
-	title: 'Containers/Ul map',
+	title: 'Containers/Lists/Ul map',
 }
 
 export const UlMap = ({ list, ...props }) => {

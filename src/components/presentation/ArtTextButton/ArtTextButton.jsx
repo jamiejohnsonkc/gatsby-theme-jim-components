@@ -2,7 +2,7 @@
 import { jsx, Text, Box } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from '../../ui/buttons/Button'
+import Button from '../../ui/Button'
 import Glyph from '../../../svg/assets/fpo/glyph-1.svg'
 
 const ArtTextButton = ({
@@ -85,7 +85,7 @@ ArtTextButton.defaultProps = {
     buttonButton: <Button variant="buttons.primaryMd" />,
     textMb: 4,
     textText:
-        'Loren sump dolor sit mate, wist intelligent tied, acquit per sues rip ides emu in. Romanesque foreordains xiv, toll it parted mes no.',
+        'Loren gypsum dolor sit met, sit bemuses complected, dolor em pertinacity dissenter est re. Pro ad prompts feud gait, quid exercise emeritus bis es.',
     textVariant: 'text.text_md',
 }
 

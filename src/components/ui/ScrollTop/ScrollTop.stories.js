@@ -2,7 +2,7 @@ import React from 'react'
 import ScrollTop from './ScrollTop'
 
 export default {
-	title: 'Design Elements/Controls/ScrollTop',
+	title: 'Ui/Controls/ScrollTop',
 }
 
 export const standard = () => <ScrollTop />

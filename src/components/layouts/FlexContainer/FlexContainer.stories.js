@@ -5,7 +5,7 @@ import FlexItem from '../FlexItem'
 import FlexContainer from './FlexContainer'
 
 export default {
-    title: 'FlexContainer',
+    title: 'Layout/Flex/FlexContainer',
     component: FlexContainer,
     argTypes: {
         flexContainerVariant: {
@@ -23,6 +23,8 @@ export default {
     },
     subcomponents: { FlexItem, TextLink },
 }
+
+//TODO refactor
 
 export const Mono = (args) => (
     <FlexContainer {...args}>

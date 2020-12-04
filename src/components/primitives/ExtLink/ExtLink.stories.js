@@ -2,7 +2,7 @@ import React from 'react'
 import ExtLink from './ExtLink'
 
 export default {
-	title: 'Ui/ExtLink',
+	title: 'Primitives/ExtLink',
 }
 
 export const standard = () => <ExtLink />

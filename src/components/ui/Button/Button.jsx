@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
-import SysButton from '../../../primitives/SysButton/SysButton'
+import SysButton from '../../primitives/SysButton/SysButton'
 
 // TODO ensure props are consistent across buttons
 

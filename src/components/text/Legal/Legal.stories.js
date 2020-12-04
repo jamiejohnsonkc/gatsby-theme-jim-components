@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Copyright from '../../../containers/Copyright'
+import Copyright from '../../containers/Copyright'
 import Legal from './Legal'
 
 export default {

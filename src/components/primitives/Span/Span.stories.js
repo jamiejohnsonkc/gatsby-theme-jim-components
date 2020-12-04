@@ -2,7 +2,7 @@ import React from 'react'
 import Span from './Span'
 
 export default {
-title: 'Layout/Span',
+title: 'Primitives/Span',
 }
 
 export const standard = () => (

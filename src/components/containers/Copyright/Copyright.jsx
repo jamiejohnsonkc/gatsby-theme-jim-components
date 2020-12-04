@@ -3,7 +3,7 @@ import { jsx, Box } from 'theme-ui'
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import OrgLegalName from '../../ui/OrgLegalName'
+import OrgLegalName from '../OrgLegalName'
 
 const Copyright = ([{ copyrightDisplay, organizationName, ...props }]) => (
     <Box

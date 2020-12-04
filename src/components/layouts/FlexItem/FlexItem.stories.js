@@ -2,7 +2,7 @@ import React from 'react'
 import FlexItem from './FlexItem'
 
 export default {
-title: 'FlexItem',
+title: 'Layout/Flex/FlexItem',
 }
 
 export const standard = () => (

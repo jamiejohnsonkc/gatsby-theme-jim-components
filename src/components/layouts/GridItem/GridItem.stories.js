@@ -2,7 +2,7 @@ import React from 'react'
 import GridItem from './GridItem'
 
 export default {
-title: 'GridItem',
+title: 'Layout/Grid/GridItem',
 }
 
 export const standard = () => (

@@ -4,7 +4,7 @@ import ButtonOutline from './ButtonOutline'
 
 
 export default {
-	title: 'Design Elements/Buttons/ButtonOutline',
+	title: 'Ui/Buttons/ButtonOutline',
 	component: ButtonOutline,
 	argTypes: {
 		backgroundColor: {control: 'color'},

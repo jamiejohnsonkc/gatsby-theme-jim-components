@@ -129,7 +129,7 @@ HoverHglUdrln.defaultProps = {
     textColor: 'text',
     underlineColor: 'primary',
     underlineHeight: '4px',
-    children: 'Hover Animated Highlight + Underline',
+    children: 'Hover: Animated Highlight + Underline',
 }
 
 export default HoverHglUdrln

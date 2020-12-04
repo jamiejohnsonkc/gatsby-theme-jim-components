@@ -6,7 +6,7 @@ import Ol from '../../primitives/Ol'
 import Li from '../../primitives/Li'
 
 export default {
-	title: 'Containers/Ol map',
+	title: 'Containers/Lists/Ol map',
 }
 
 export const OlMap = ({ list, ...props }) => {

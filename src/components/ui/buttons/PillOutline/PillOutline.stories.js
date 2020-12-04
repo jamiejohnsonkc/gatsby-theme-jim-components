@@ -4,7 +4,7 @@ import PillOutline from './PillOutline'
 
 
 export default {
-	title: 'Design Elements/Buttons/PillOutline',
+	title: 'Ui/Buttons/PillOutline',
 	component: PillOutline,
 	argTypes: {
 		backgroundColor: {control: 'color'},

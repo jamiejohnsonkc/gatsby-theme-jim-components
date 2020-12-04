@@ -91,9 +91,9 @@ ArtTextLink.defaultProps = {
     artWidth: '100%',
     textMb: 4,
     textText:
-        'Text lg lorem ea aliqua adipisicing ex sunt culpa in. Nisi ut veniam pariatur ullamco sint magna eu id sint voluptate ullamco laboris.',
+        'Loren gypsum dolor sit met, sit bemuses complected, dolor em pertinacity dissenter est re. Pro ad prompts feud gait, quid exercise emeritus bis es.',
     textVariant: 'text.text_lg',
-    linkLink: <AnchorLink />,
+    linkLink: <AnchorLink linkTo="/">Anchor Link</AnchorLink>,
 }
 
 export default ArtTextLink

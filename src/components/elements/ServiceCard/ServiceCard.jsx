@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import { Box, Card, jsx } from 'theme-ui'
 import React from 'react'
-import ArtHdngText from '../../presentation/ArtHdngText'
+import ArtHeadingText from '../../presentation/ArtHeadingText '
 import CtaLinkInt from '../../ui/CtaLinkInt'
 import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame'
 
@@ -52,7 +52,7 @@ const ServiceCard = ({
                         },
                     }}
                 >
-                    <ArtHdngText
+                    <ArtHeadingText
                         blockWidth="100%"
                         compImage={compImage}
                         visualHeight="2.25em"

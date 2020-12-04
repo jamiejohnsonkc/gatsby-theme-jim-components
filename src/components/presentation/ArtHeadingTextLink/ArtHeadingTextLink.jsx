@@ -2,10 +2,11 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Box, Heading, jsx, Text } from 'theme-ui'
+import AnchorLink from '../../primitives/AnchorLink'
 import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame/FpoImageWireFrame'
 
 // todo refactor
-const ArtHdngText = ({
+const ArtHeadingTextLink = ({
     artArt,
     artMb,
     boxBg,
@@ -25,6 +26,7 @@ const ArtHdngText = ({
     textVariant,
     artHeight,
     artWidth,
+    linkLink,
     ...props
 }) => (
     <>
@@ -70,11 +72,12 @@ const ArtHdngText = ({
             >
                 {textText}
             </Text>
+            {linkLink}
         </Box>
     </>
 )
 
-ArtHdngText.propTypes = {
+ArtHeadingTextLink.propTypes = {
     artArt: PropTypes.any,
     artClassName: PropTypes.any,
     artHeight: PropTypes.any,
@@ -94,9 +97,10 @@ ArtHdngText.propTypes = {
     textMb: PropTypes.number,
     textText: PropTypes.string,
     textVariant: PropTypes.string,
+    linkLink: PropTypes.any,
 }
 
-ArtHdngText.defaultProps = {
+ArtHeadingTextLink.defaultProps = {
     artArt: <FpoImageWireFrame />,
     artMb: 4,
     artHeight: '12em',
@@ -108,8 +112,9 @@ ArtHdngText.defaultProps = {
     textMb: 4,
     headingHeading: 'Loren sump dolor sit mate',
     textText:
-        'Loren sump dolor sit mate, wist intelligent tied, acquit per sues rip ides emu in. Romanesque foreordains xiv, toll it parted mes no.',
+        'Loren gypsum dolor sit met, sit bemuses complected, dolor em pertinacity dissenter est re. Pro ad prompts feud gait, quid exercise emeritus bis es.',
     textVariant: 'text.text_md',
+    linkLink: <AnchorLink linkTo="/">Anchor Link</AnchorLink>,
 }
 
-export default ArtHdngText
+export default ArtHeadingTextLink

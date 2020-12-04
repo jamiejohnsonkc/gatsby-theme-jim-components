@@ -12,7 +12,7 @@ export default {
     },
 }
 
-const Template = ({
+export const standard = ({
     args,
     differenceColor,
     outlineColor,
@@ -29,14 +29,10 @@ const Template = ({
             textColor: 'text',
             underlineColor: 'primary',
             underlineHeight: '4px',
-            children: 'Hover Animated Highlight',
+            children: 'Hover: Animated Highlight',
         }}
         {...args}
     />
 )
 
-export const Light = Template.bind({})
-Light.args = {}
 
-export const Dark = Template.bind({})
-Dark.args = {}

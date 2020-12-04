@@ -5,7 +5,7 @@ import Section from './Section'
 import Article from '../Article'
 
 export default {
-	title: 'Layout/Section',
+	title: 'Layout/Page Elements/Section',
 }
 
 export const standard = (props) => (

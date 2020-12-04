@@ -4,7 +4,7 @@ import { jsx, Box } from 'theme-ui'
 import React from 'react'
 // import { Link } from 'gatsby'
 
-//TODO refactor
+// TODO refactor
 
 const HoverTextFill = (props) => (
     <Box
@@ -50,8 +50,7 @@ HoverTextFill.propTypes = {
 }
 
 HoverTextFill.defaultProps = {
-    children: 'Hover Fill Text',
-    className: 'className',
+    children: 'Hover: Animated Text Fill',
 }
 
 export default HoverTextFill

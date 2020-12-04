@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import React from 'react'
 // import animation from '../../../../../../../gatsby-theme-scroll-reveal/animation'
 import PropTypes from 'prop-types'
-import Subhead from '../../../../ui/Text/Subhead'
+import Subhead from '../../../../text/Subhead'
 // import Headline from '../../primitives/Text/Headline'
 // import Subline from '../../primitives/Text/Subline'
 
