@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import HoverHglUdrln from './HoverHglUdrln'
+import HoverBgHlUndln from './HoverBgHlUndln'
 
 export default {
 	title: 'Style/Hover Styles/Hover:Highlight & Underline',
-	component: HoverHglUdrln,
+	component: HoverBgHlUndln,
 	argTypes: {
 		backgroundColor: {control: 'color'},
 		backgroundHoverColor: {control: 'color'},
@@ -13,7 +13,7 @@ export default {
 	},
 };
 
-const Template = ({args, underlineColor, underLineHeight, differenceColor, ...props}) => <HoverHglUdrln {...props} sx={{
+const Template = ({args, underlineColor, underLineHeight, differenceColor, ...props}) => <HoverBgHlUndln {...props} sx={{
 fontSize: 5,
 fontFamily: 'heading',
 fontWeight: 'heavy',

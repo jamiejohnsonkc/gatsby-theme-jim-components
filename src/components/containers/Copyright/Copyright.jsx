@@ -5,17 +5,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import OrgLegalName from '../OrgLegalName'
 
-const Copyright = ([{ copyrightDisplay, organizationName, ...props }]) => (
-    <Box
-        {...props}
-        sx={{
-            display: `${copyrightDisplay}`,
-        }}
-    >
-        ©{new Date().getFullYear()}
-        <OrgLegalName>{organizationName}</OrgLegalName>
-    </Box>
-)
+const Copyright = ([{ copyrightDisplay, organizationName, ...props }]) => {
+    return (
+        <Box
+            {...props}
+            sx={{
+                display: `${copyrightDisplay}`,
+            }}
+        >
+            ©{new Date().getFullYear()}
+            <OrgLegalName>{organizationName}</OrgLegalName>
+        </Box>
+    )
+}
 
 Copyright.propTypes = {
     organizationName: PropTypes.any,

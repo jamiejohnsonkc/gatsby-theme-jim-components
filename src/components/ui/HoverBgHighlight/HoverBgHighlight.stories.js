@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import HoverHgl from './HoverHgl'
+import HoverBgHighlight from './HoverBgHighlight'
 
 export default {
     title: 'Style/Hover Styles/Hover:background highlight',
-    component: HoverHgl,
+    component: HoverBgHighlight,
     argTypes: {
         color: { control: 'color' },
 
@@ -19,7 +19,7 @@ export const standard = ({
     textColor,
     ...props
 }) => (
-    <HoverHgl
+    <HoverBgHighlight
         {...props}
         sx={{
             fontSize: 5,

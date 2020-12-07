@@ -9,7 +9,7 @@ import styles from './keyframes.module.css'
 
 const ScrollDownLineAnimatedVert = (props) => (
     <Grid
-        columns=".5fr 2.5fr"
+        // columns=".5fr 2.5fr"
         {...props}
         sx={{
             height: '4em',
@@ -31,7 +31,8 @@ const ScrollDownLineAnimatedVert = (props) => (
                     paddingTop: '51px',
                     textAlign: 'center',
                     '&::before': {
-                        background: (theme) => `${theme.colors.primary}`,
+                        // background: (theme) => `${theme.colors.primary}`,
+                        bg: 'primary',
                         position: 'absolute',
                         top: '0px',
                         left: '50%',

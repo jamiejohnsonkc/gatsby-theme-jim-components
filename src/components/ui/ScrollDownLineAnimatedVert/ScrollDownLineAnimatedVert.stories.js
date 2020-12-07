@@ -5,4 +5,9 @@ export default {
 	title: 'Ui/ScrollDownLineAnimatedVert',
 }
 
-export const standard = () => <ScrollDownLineAnimatedVert />
+export const standard = () => (
+
+<div style={{position: 'absolute', bottom: '15px', right: "13%", width: '10px'}}>
+	<ScrollDownLineAnimatedVert />
+</div>
+)

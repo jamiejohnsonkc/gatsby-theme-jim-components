@@ -16,7 +16,7 @@ const DecorationSpan = styled.span`
     }
 `
 
-const HoverHglUdrln = ({
+const HoverBgHlUndln = ({
     textColor,
     outlineColor,
     differenceColor,
@@ -111,7 +111,7 @@ const HoverHglUdrln = ({
     </BackgroundSpan>
 )
 
-HoverHglUdrln.propTypes = {
+HoverBgHlUndln.propTypes = {
     differenceColor: PropTypes.any,
     // hoverText: PropTypes.string,
     outlineColor: PropTypes.any,
@@ -121,7 +121,7 @@ HoverHglUdrln.propTypes = {
     children: PropTypes.string,
 }
 
-HoverHglUdrln.defaultProps = {
+HoverBgHlUndln.defaultProps = {
     differenceColor: 'rgb(252,86,11)',
     // differenceColor: 'bleed',
     // hoverText: '',
@@ -132,4 +132,4 @@ HoverHglUdrln.defaultProps = {
     children: 'Hover: Animated Highlight + Underline',
 }
 
-export default HoverHglUdrln
+export default HoverBgHlUndln

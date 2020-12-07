@@ -10,11 +10,21 @@ const Button = ({
     buttonVariant = 'primary',
     buttonChild,
     buttonType,
+    boxShadow,
     bg,
     color,
-    border,
+    borderColor,
+    borderStyle,
+    borderWidth,
     borderRadius,
     buttonRadius,
+    backgroundImage,
+    buttonSize,
+    px,
+    py,
+    fontSize,
+    minWidth,
+    letterSpacing,
     ...props
 }) => (
     <button
@@ -22,8 +32,16 @@ const Button = ({
         type={buttonType}
         sx={{
             bg,
+            px,
+            py,
+            fontSize,
+            minWidth,
+            letterSpacing,
+            boxShadow,
             color,
-            border,
+            borderColor,
+            borderStyle,
+            borderWidth,
             borderRadius: `${buttonRadius}`,
             variant: `${buttonVariant}`,
         }}
@@ -37,13 +55,19 @@ Button.propTypes = {
     buttonChild: PropTypes.string,
     buttonRadius: PropTypes.string,
     buttonVariant: PropTypes.string,
+    buttonType: PropTypes.string,
+    borderColor: PropTypes.string,
+    borderWidth: PropTypes.string,
+    // backgroundImage: PropTypes.string,
 }
 
 Button.defaultProps = {
     buttonChild: 'button',
     buttonRadius: 'rounded',
-    buttonVariant: 'buttons.primaryLg',
-    // buttonVariant: 'buttons.lg',
+    buttonType: 'button',
+    buttonVariant: 'buttons.primary.lg',
+    borderColor: 'transparent',
+    borderWidth: '.1618em',
 }
 
 export default Button

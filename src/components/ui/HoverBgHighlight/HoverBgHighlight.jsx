@@ -11,7 +11,7 @@ const BackgroundSpan = styled.span`
     }
 `
 
-const HoverHgl = ({
+const HoverBgHighlight = ({
     textColor,
     outlineColor,
     differenceColor,
@@ -88,7 +88,7 @@ const HoverHgl = ({
     </BackgroundSpan>
 )
 
-HoverHgl.propTypes = {
+HoverBgHighlight.propTypes = {
     differenceColor: PropTypes.any,
     // hoverText: PropTypes.string,
     outlineColor: PropTypes.any,
@@ -96,11 +96,11 @@ HoverHgl.propTypes = {
     children: PropTypes.string,
 }
 
-HoverHgl.defaultProps = {
+HoverBgHighlight.defaultProps = {
     differenceColor: 'rgb(252,86,11)',
     outlineColor: 'primary',
     textColor: 'text',
     children: 'Hover Animated Highlight',
 }
 
-export default HoverHgl
+export default HoverBgHighlight
