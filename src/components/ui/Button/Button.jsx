@@ -8,41 +8,44 @@ import SysButton from '../../primitives/SysButton/SysButton'
 
 const Button = ({
     buttonVariant = 'primary',
-    buttonChild,
-    buttonType,
-    boxShadow,
+    backgroundImage,
     bg,
-    color,
     borderColor,
+    borderRadius,
     borderStyle,
     borderWidth,
-    borderRadius,
+    boxShadow,
+    buttonChild,
     buttonRadius,
-    backgroundImage,
     buttonSize,
+    buttonType,
+    color,
+    fontSize,
+    letterSpacing,
+    minWidth,
     px,
     py,
-    fontSize,
-    minWidth,
-    letterSpacing,
+    fontWeight,
     ...props
 }) => (
     <button
         {...props}
         type={buttonType}
         sx={{
+            backgroundImage,
             bg,
-            px,
-            py,
-            fontSize,
-            minWidth,
-            letterSpacing,
-            boxShadow,
-            color,
+            fontWeight,
             borderColor,
+            borderRadius: `${buttonRadius}`,
             borderStyle,
             borderWidth,
-            borderRadius: `${buttonRadius}`,
+            boxShadow,
+            color,
+            fontSize,
+            letterSpacing,
+            minWidth,
+            px,
+            py,
             variant: `${buttonVariant}`,
         }}
     >
@@ -58,6 +61,8 @@ Button.propTypes = {
     buttonType: PropTypes.string,
     borderColor: PropTypes.string,
     borderWidth: PropTypes.string,
+    fontWeight: PropTypes.string,
+    letterSpacing: PropTypes.string,
     // backgroundImage: PropTypes.string,
 }
 
@@ -65,9 +70,11 @@ Button.defaultProps = {
     buttonChild: 'button',
     buttonRadius: 'rounded',
     buttonType: 'button',
-    buttonVariant: 'buttons.primary.lg',
+    buttonVariant: 'buttons.solid.primary.lg',
     borderColor: 'transparent',
     borderWidth: '.1618em',
+    fontWeight: 'bold',
+    letterSpacing: 'loose',
 }
 
 export default Button

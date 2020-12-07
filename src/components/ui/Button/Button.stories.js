@@ -1,12 +1,48 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import Button from './Button'
+// import buttons from '../../../../../gatsby-theme-jim-theme-ui/src/gatsby-plugin-theme-ui/ex-theme-ui/gradients'
 
 export default {
     title: 'Ui/Controls/Button',
     component: Button,
     argTypes: {
         buttonChild: { name: 'text', control: 'text' },
+        	buttonVariant: {
+        		control: {
+        				type: 'select',
+        				options: {
+                            none: null,
+                            primarySm: 'buttons.solid.primary.sm',
+        					primaryMd: 'buttons.solid.primary.md',
+        					primaryLg: 'buttons.solid.primary.lg',
+        					secondarySm: 'buttons.solid.secondary.sm',
+        					secondaryMd: 'buttons.solid.secondary.md',
+        					secondaryLg: 'buttons.solid.secondary.lg',
+        					graySm: 'buttons.solid.gray.sm',
+        					grayMd: 'buttons.solid.gray.md',
+        					grayLg: 'buttons.solid.gray.lg',
+        					primaryOutlineSm: 'buttons.outline.primary.sm',
+        					primaryOutlineMd: 'buttons.outline.primary.md',
+        					primaryOutlineLg: 'buttons.outline.primary.lg',
+        					secondaryOutlineSm: 'buttons.outline.secondary.sm',
+        					secondaryOutlineMd: 'buttons.outline.secondary.md',
+        					secondaryOutlineLg: 'buttons.outline.secondary.lg',
+        					grayOutlineSm: 'buttons.outline.gray.sm',
+        					grayOutlineMd: 'buttons.outline.gray.md',
+        					grayOutlineLg: 'buttons.outline.gray.lg',
+                            primaryltrHoverGradSm: 'buttons.ltrHoverGrad.primary.sm',
+                            primaryltrHoverGradMd: 'buttons.ltrHoverGrad.primary.sm',
+                            primaryltrHoverGradLg: 'buttons.ltrHoverGrad.primary.sm',
+                            secondaryltrHoverGradSm: 'buttons.ltrHoverGrad.secondary.sm',
+                            secondaryltrHoverGradMd: 'buttons.ltrHoverGrad.secondary.md',
+                            secondaryltrHoverGradLg: 'buttons.ltrHoverGrad.secondary.lg',
+                            grayltrHoverGradSm: 'buttons.ltrHoverGrad.gray.sm',
+                            grayltrHoverGradMd: 'buttons.ltrHoverGrad.gray.md',
+                            grayltrHoverGradLg: 'buttons.ltrHoverGrad.gray.lg',
+        				},
+        		},
+        },
         fontSize: {
             control: {
                 type: 'inline-radio',
@@ -21,6 +57,12 @@ export default {
             control: {
                 type: 'select',
                 options: ['primary', 'secondary', 'gray', 'text', 'background'],
+            },
+        },
+        fontWeight: {
+            control: {
+                type: 'inline-radio',
+                options: ['light', 'normal', 'bold', 'heavy'],
             },
         },
         bg: {
@@ -62,38 +104,6 @@ export default {
                 },
             },
         },
-        borderStyle: {
-                disable: true,
-        },
-
-        // 	buttonVariant: {
-        // 		control: {
-        // 				type: 'select',
-        // 				options: {
-        // 					primarySm: 'buttons.primary.sm',
-        // 					primaryMd: 'buttons.primary.md',
-        // 					primaryLg: 'buttons.primary.lg',
-        // 					secondarySm: 'buttons.secondary.sm',
-        // 					secondaryMd: 'buttons.secondary.md',
-        // 					secondaryLg: 'buttons.secondary.lg',
-        // 					graySm: 'buttons.gray.sm',
-        // 					grayMd: 'buttons.gray.md',
-        // 					grayLg: 'buttons.gray.lg',
-        // 					primaryOutlineSm: 'buttons.outline.primary.sm',
-        // 					primaryOutlineMd: 'buttons.outline.primary.md',
-        // 					primaryOutlineLg: 'buttons.outline.primary.lg',
-        // 					secondaryOutlineSm: 'buttons.outline.secondary.sm',
-        // 					secondaryOutlineMd: 'buttons.outline.secondary.md',
-        // 					secondaryOutlineLg: 'buttons.outline.secondary.lg',
-        // 					grayOutlineSm: 'buttons.outline.gray.sm',
-        // 					grayOutlineMd: 'buttons.outline.gray.md',
-        // 					grayOutlineLg: 'buttons.outline.gray.lg',
-        // 					gradientHoverPrimary: 'buttons.gradientHover.primary',
-        // 					gradientTest: 'buttons.gradientTest',
-        // 				},
-        // 		},
-        // },
-
         buttonRadius: {
             control: {
                 type: 'select',
