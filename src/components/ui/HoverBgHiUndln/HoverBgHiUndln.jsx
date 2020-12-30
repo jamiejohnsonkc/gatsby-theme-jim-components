@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
+
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-//TODO refactor out spans & style
+//TODO rename to reflect animated underline
 
 const BackgroundSpan = styled.span`
      {
@@ -16,8 +17,9 @@ const DecorationSpan = styled.span`
     }
 `
 
-const HoverBgHlUndln = ({
+const HoverBgHiUndln = ({
     textColor,
+    containerMl,
     outlineColor,
     differenceColor,
     underlineHeight,
@@ -29,7 +31,7 @@ const HoverBgHlUndln = ({
         sx={{
             // color: 'text',
             color: `${textColor}`,
-            cursor: 'pointer',
+            // cursor: 'pointer',
             display: [
                 'block',
                 'inline-flex',
@@ -40,7 +42,7 @@ const HoverBgHlUndln = ({
             margin: '0px',
             mt: [4, 4, 0, 0, 0],
             mb: [4, 0, 0, 0, 0],
-            ml: [0, 2, 2, 2, 2],
+            ml: `${containerMl}`,
             // outlineColor: 'primary',
             outlineColor: `${outlineColor}`,
             overflow: 'hidden',
@@ -111,25 +113,24 @@ const HoverBgHlUndln = ({
     </BackgroundSpan>
 )
 
-HoverBgHlUndln.propTypes = {
-    differenceColor: PropTypes.any,
-    // hoverText: PropTypes.string,
-    outlineColor: PropTypes.any,
-    textColor: PropTypes.any,
-    underlineColor: PropTypes.any,
-    underlineHeight: PropTypes.any,
-    children: PropTypes.string,
+HoverBgHiUndln.propTypes = {
+    containerMl: PropTypes.any,
+    differenceColor: PropTypes.string,
+    outlineColor: PropTypes.string,
+    textColor: PropTypes.string,
+    underlineColor: PropTypes.string,
+    underlineHeight: PropTypes.string,
 }
 
-HoverBgHlUndln.defaultProps = {
-    differenceColor: 'rgb(252,86,11)',
-    // differenceColor: 'bleed',
+HoverBgHiUndln.defaultProps = {
+    // differenceColor: 'rgb(252,86,11)',
+    differenceColor: 'bleed',
     // hoverText: '',
     outlineColor: 'primary',
     textColor: 'text',
     underlineColor: 'primary',
-    underlineHeight: '4px',
-    children: 'Hover: Animated Highlight + Underline',
+    underlineHeight: '1px',
+    containerMl: [0, 2, 2, 2, 2, 2],
 }
 
-export default HoverBgHlUndln
+export default HoverBgHiUndln

@@ -3,7 +3,7 @@ import { jsx, Heading } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Headline = ({ as, variant = 'headline', mb, color, ...props }) => (
+const Busker = ({ as, variant = 'busker', mb, color, ...props }) => (
     <Heading
         {...props}
         as={as}
@@ -17,14 +17,14 @@ const Headline = ({ as, variant = 'headline', mb, color, ...props }) => (
     </Heading>
 )
 
-Headline.propTypes = {
+Busker.propTypes = {
     variant: PropTypes.string,
     children: PropTypes.string,
 }
 
-Headline.defaultProps = {
-    children: 'Headlines get to the point',
-    variant: 'styles.h3',
+Busker.defaultProps = {
+    children: 'Buskers grab attention.',
+    variant: 'styles.bu1',
 }
 
-export default Headline
+export default Busker

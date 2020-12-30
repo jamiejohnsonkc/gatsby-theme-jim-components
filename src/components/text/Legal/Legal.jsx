@@ -3,16 +3,14 @@ import { jsx, Text } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Legal = ({ variant = 'legal', legalDisplay, ...props }) => (
+const Legal = ({ variant = 'legal', ...props }) => (
     <Text
         {...props}
         sx={{
             variant: `${variant}`,
-            display: `${legalDisplay}`,
         }}
-    >
-        {props.children}
-    </Text>
+        children={props.children}
+    />
 )
 
 Legal.propTypes = {

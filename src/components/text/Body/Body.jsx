@@ -3,25 +3,26 @@ import { jsx, Text } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Display = ({ as, ...props }) => (
+const Body = ({ as, ...props }) => (
     <Text
         {...props}
         as={as}
         sx={{
-            variant: 'display',
+            variant: 'body',
         }}
         children={props.children}
     />
 )
 
-Display.propTypes = {
+Body.propTypes = {
     variant: PropTypes.string,
     children: PropTypes.string,
 }
 
-Display.defaultProps = {
-    children: 'Display text entices curiosity and continued engagement.',
-    variant: 'styles.d1',
+Body.defaultProps = {
+    children:
+        'Long form content provides context and support for key messages.',
+    variant: 'b2',
 }
 
-export default Display
+export default Body
