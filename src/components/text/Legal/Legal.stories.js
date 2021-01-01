@@ -4,7 +4,7 @@ import Copyright from '../../containers/Copyright'
 import Legal from './Legal'
 
 export default {
-    title: 'Typography/Legal',
+    title: 'Components/Typography/Legal',
     component: Legal,
 }
 

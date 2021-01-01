@@ -1,7 +1,7 @@
 import Subhead from './Subhead'
 
 export default {
-	title: 'Typography/Subhead',
+	title: 'Components/Typography/Subhead',
 	component: Subhead,
 }
 

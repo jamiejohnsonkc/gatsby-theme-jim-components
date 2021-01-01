@@ -1,7 +1,7 @@
 import Subline from './Subline'
 
 export default {
-	title: 'Typography/Subline',
+	title: 'Components/Typography/Subline',
 	component: Subline,
 }
 

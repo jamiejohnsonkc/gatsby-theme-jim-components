@@ -4,11 +4,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-//TODO refactor & confirm necessity
+// TODO refactor & confirm necessity
 
-const StyledSpan = styled.span``
-
-const Span = (props) => <StyledSpan {...props} />
+const Span = (props) => <span>{props.children}</span>
 
 Span.propTypes = {}
 

@@ -6,10 +6,7 @@ import styled from '@emotion/styled'
 
 //TODO refactor out spans & style
 
-const BackgroundSpan = styled.span`
-     {
-    }
-`
+const BackgroundSpan = (props) => <span>{props.children}</span>
 
 const HoverBgHighlight = ({
     textColor,

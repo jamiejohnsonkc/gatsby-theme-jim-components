@@ -5,7 +5,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-const StyledParagraph = styled.p``
+const StyledParagraph = (props) => <p>{props.children}</p>
 
 //TODO Refactor like caption?
 

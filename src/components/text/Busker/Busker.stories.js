@@ -2,9 +2,11 @@ import React from 'react'
 import Busker from './Busker'
 
 export default {
-title: 'Busker',
+  title: 'Components/Typography',
 }
 
-export const standard = () => (
-<Busker/>
+export const standard = (props) => (
+<Busker {...props} sx={{
+variant: 'styles.bu1'
+}} />
 )

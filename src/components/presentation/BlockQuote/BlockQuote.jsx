@@ -8,7 +8,7 @@ import { MdFormatQuote } from 'react-icons/md'
 
 //TODO deconstruct
 
-const StyledSpan = styled(span)``
+const StyledSpan = (props) => <span>{props.children}</span>
 
 const BlockQuote = ({ endorser, endorsement, ...props }) => (
     <Box>

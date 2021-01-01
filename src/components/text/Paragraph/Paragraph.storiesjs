@@ -1,7 +1,7 @@
 import Paragraph from './Paragraph'
 
 export default {
-    title: 'Typography/Paragraph',
+    title: 'Components/Typography/Paragraph',
     component: Paragraph,
     argTypes: {
         variant: {

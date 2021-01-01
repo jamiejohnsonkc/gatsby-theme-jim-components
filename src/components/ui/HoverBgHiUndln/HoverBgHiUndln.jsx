@@ -7,15 +7,9 @@ import styled from '@emotion/styled'
 
 //TODO rename to reflect animated underline
 
-const BackgroundSpan = styled.span`
-     {
-    }
-`
+const BackgroundSpan = (props) => <span>{props.children}</span>
 
-const DecorationSpan = styled.span`
-     {
-    }
-`
+const DecorationSpan = (props) => <span>{props.children}</span>
 
 const HoverBgHiUndln = ({
     textColor,

@@ -1,8 +1,9 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es2016",
-		"jsx": "preserve"
-	},
-	"exclude": ["node_modules", "**/node_modules/*", "cache", "**/public/*"]
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "checkJs": true,
+        "jsx": "react"
+    },
+    "include": ["**/src/**/*.js"],
+    "exclude": ["node_modules", "**/node_modules/*", "cache", "**/public/*"]
 }

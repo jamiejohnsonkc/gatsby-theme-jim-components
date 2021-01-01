@@ -8,10 +8,8 @@
         "plugin:react/recommended",
         "airbnb",
         "airbnb/hooks",
-        "plugin:import/typescript",
-        "prettier/react",
         "prettier",
-        "prettier/@typescript-eslint"
+        "prettier/react"
     ],
 
     "parserOptions": {
@@ -22,7 +20,6 @@
         }
     },
 
-    "parser": "@typescript-eslint/parser",
     "plugins": ["react", "prettier", "import"],
     "rules": {
         "react/jsx-props-no-spreading": [
@@ -64,6 +61,16 @@
             {
                 "vars": "local",
                 "args": "none"
+            }
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "trailingComma": "es5",
+                "tabWidth": 2,
+                "semi": false,
+                "singleQuote": true,
+                "endOfLine": "auto"
             }
         ]
     },

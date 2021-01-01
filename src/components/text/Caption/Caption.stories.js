@@ -2,7 +2,7 @@ import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame'
 import Caption from './Caption'
 
 export default {
-	title: 'Typography/Caption',
+	title: 'Components/Typography/Caption',
 	component: Caption,
 	decorators:  [(Story) =>
 

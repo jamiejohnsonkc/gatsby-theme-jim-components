@@ -5,7 +5,7 @@ import Paragraph from '../Paragraph'
 import Display from './Display'
 
 export default {
-    title: 'Typography/Display',
+    title: 'Components/Typography/Display',
     component: Display,
 }
 

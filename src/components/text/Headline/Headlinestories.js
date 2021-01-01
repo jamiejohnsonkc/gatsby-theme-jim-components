@@ -2,7 +2,7 @@ import Headline from './Headline'
 
 
 export default {
-	title: 'Design Elements/Type/Headlines/Headline',
+	title: 'Components/Typography/Headline',
 }
 
 export const standard = (props) => (
