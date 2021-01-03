@@ -4,19 +4,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-//TODO refactor out spans & style
+// TODO refactor out spans & style
 
-const BackgroundSpan = (props) => <span>{props.children}</span>
+// const BackgroundSpan = (props) => <span>{props.children}</span>
 
 const HoverBgHighlight = ({
     textColor,
-    outlineColor,
+    // outlineColor,
     differenceColor,
-    underlineHeight,
-    underlineColor,
     ...props
 }) => (
-    <BackgroundSpan
+    <span
         {...props}
         sx={{
             // color: 'text',
@@ -34,7 +32,7 @@ const HoverBgHighlight = ({
             mb: [4, 0, 0, 0, 0],
             ml: [0, 2, 2, 2, 2],
             // outlineColor: 'primary',
-            outlineColor: `${outlineColor}`,
+            // outlineColor: `${outlineColor}`,
             overflow: 'hidden',
             position: 'relative',
             padding: ['0px', '0px', '0px 8px', '0px 8px', '0px 8px'],
@@ -82,22 +80,21 @@ const HoverBgHighlight = ({
         }}
     >
         {props.children}
-    </BackgroundSpan>
+    </span>
 )
 
 HoverBgHighlight.propTypes = {
-    differenceColor: PropTypes.any,
-    // hoverText: PropTypes.string,
-    outlineColor: PropTypes.any,
-    textColor: PropTypes.any,
     children: PropTypes.string,
+    differenceColor: PropTypes.string,
+    outlineColor: PropTypes.string,
+    textColor: PropTypes.string,
 }
 
 HoverBgHighlight.defaultProps = {
     differenceColor: 'rgb(252,86,11)',
-    outlineColor: 'primary',
+    outlineColor: 'transparent',
     textColor: 'text',
-    children: 'Hover Animated Highlight',
+    children: 'Hover: Background Highlight',
 }
 
 export default HoverBgHighlight

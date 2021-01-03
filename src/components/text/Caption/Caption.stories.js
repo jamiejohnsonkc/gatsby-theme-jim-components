@@ -1,15 +1,23 @@
-import FpoImageWireFrame from '../../utilities/fpo/FpoImageWireFrame'
 import Caption from './Caption'
 
 export default {
-	title: 'Components/Typography/Caption',
+	title: 'Components/Typography',
 	component: Caption,
-	decorators:  [(Story) =>
-
-
-			<div style={{height: '14em', maxWidth: '38em',background: '#e6e6e6'}}><FpoImageWireFrame/>
-		<Story/></div>
-	],
+	argTypes: {
+			variant: {
+					name: 'size',
+					control: {
+							type: 'select',
+							options: {
+									large: 'styles.u1',
+									medium: 'styles.u2',
+									small: 'styles.p3',
+							},
+					},
+			},
+	},
 }
 
-export const standard = () => <Caption />
+export const CaptionStory = (args) => <Caption {...args} />
+
+CaptionStory.storyName = 'Caption'

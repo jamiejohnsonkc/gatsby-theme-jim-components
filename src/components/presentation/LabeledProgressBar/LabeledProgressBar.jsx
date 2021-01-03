@@ -13,7 +13,7 @@ const LabeledProgressBar = ({ progressLabel, labelColor, done, ...props }) => (
         {...props}
         sx={{
             display: 'inline-grid',
-            gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr', '.83fr', '.83fr'],
+            // gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr', '.83fr', '.83fr'],
             // '1fr',
             // '1fr',
             // '1.25fr 2.75fr',
@@ -40,7 +40,7 @@ const LabeledProgressBar = ({ progressLabel, labelColor, done, ...props }) => (
                 // width: '7em',
                 fontFamily: 'caption',
                 // fontVariant: 'all-small-caps',
-                fontSize: ['10px', 1, 2, 2, 0, 0],
+                fontSize: ['10px', 1, 2, 2, 0, 0, 0, 0],
                 // letterSpacing: 'lazy',
                 color: `${labelColor}`,
                 lineHeight: 1.2,

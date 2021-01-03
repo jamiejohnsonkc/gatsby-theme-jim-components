@@ -4,10 +4,10 @@ import React from 'react'
 import ToggleSwitch from './ToggleSwitch'
 
 export default {
-	title: 'Ui/Inputs/ToggleSwitch',
+	title: 'Ui/Inputs/Toggles',
 }
 
-export const standard = () => (
+export const YesNo = () => (
 	<>
 		<Box>
 			<ToggleSwitch id='storyToggleSwitch' Text={['Yes', 'No']} />

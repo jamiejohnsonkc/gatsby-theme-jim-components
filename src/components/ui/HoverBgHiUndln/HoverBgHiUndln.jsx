@@ -3,13 +3,13 @@ import { jsx } from 'theme-ui'
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 
 //TODO rename to reflect animated underline
 
-const BackgroundSpan = (props) => <span>{props.children}</span>
+// const BackgroundSpan = (props) => <span>{props.children}</span>
 
-const DecorationSpan = (props) => <span>{props.children}</span>
+// const DecorationSpan = (props) => <span>{props.children}</span>
 
 const HoverBgHiUndln = ({
     textColor,
@@ -20,7 +20,7 @@ const HoverBgHiUndln = ({
     underlineColor,
     ...props
 }) => (
-    <BackgroundSpan
+    <span
         {...props}
         sx={{
             // color: 'text',
@@ -86,7 +86,7 @@ const HoverBgHiUndln = ({
         }}
     >
         {props.children}
-        <DecorationSpan
+        <span
             {...props}
             sx={{
                 // height: '2px',
@@ -104,11 +104,11 @@ const HoverBgHiUndln = ({
                 zIndex: '1',
             }}
         />
-    </BackgroundSpan>
+    </span>
 )
 
 HoverBgHiUndln.propTypes = {
-    containerMl: PropTypes.any,
+    containerMl: PropTypes.array,
     differenceColor: PropTypes.string,
     outlineColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -117,14 +117,14 @@ HoverBgHiUndln.propTypes = {
 }
 
 HoverBgHiUndln.defaultProps = {
-    // differenceColor: 'rgb(252,86,11)',
-    differenceColor: 'bleed',
+    // differenceColor: 'bleed',
     // hoverText: '',
-    outlineColor: 'primary',
+    containerMl: [0, 2, 2, 2, 2, 2, 2, 2],
+    differenceColor: 'rgb(252,86,11)',
+    outlineColor: 'transparent',
     textColor: 'text',
     underlineColor: 'primary',
-    underlineHeight: '1px',
-    containerMl: [0, 2, 2, 2, 2, 2],
+    underlineHeight: '2px',
 }
 
 export default HoverBgHiUndln

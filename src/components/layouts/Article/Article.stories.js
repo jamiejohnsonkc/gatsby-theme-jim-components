@@ -8,5 +8,5 @@ title: 'Layout/Page Elements/Article',
 }
 
 export const standard = (props) => (
-<Article p={6} m={4} bg='#e2e2e2'/>
+<Article p={6} m={4} bg={rgba(255,255,255,.5)}>Article</Article>
 )

@@ -2,7 +2,7 @@ import React from 'react'
 import ProgressBar from './ProgressBar'
 
 export default {
-    title: 'Presentation/ProgressBar',
+    title: 'Charts & Data/Progress Bar',
     component: 'ProgressBar',
     argTypes: {
         done: {
@@ -29,4 +29,6 @@ export default {
 },
 }
 
-export const standard = (args) => <ProgressBar {...args} />
+export const ProgBar = (args) => <ProgressBar {...args} />
+
+ProgBar.storyName ='Progress Bar'

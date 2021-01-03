@@ -2,9 +2,9 @@ import React from 'react'
 import Body from './Body'
 
 export default {
-title: 'Body',
+  title: 'Components/Typography',
 }
 
 export const standard = () => (
-<Body/>
+<Body variant='styles.b3'/>
 )

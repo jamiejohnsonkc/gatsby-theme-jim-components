@@ -64,7 +64,7 @@
             }
         ],
         "prettier/prettier": [
-            "error",
+            "warning",
             {
                 "trailingComma": "es5",
                 "tabWidth": 2,

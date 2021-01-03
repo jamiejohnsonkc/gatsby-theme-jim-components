@@ -5,25 +5,45 @@ import Paragraph from '../Paragraph'
 import Display from './Display'
 
 export default {
-    title: 'Components/Typography/Display',
-    component: Display,
+  title: 'Components/Typography',
+  component: Display,
+  argTypes: {
+    variant: {
+        name: 'size',
+        control: {
+            type: 'select',
+            options: {
+                large: 'styles.d1',
+                medium: 'styles.d2',
+                small: 'styles.d3',
+            },
+        },
+    },
+    fontWeight: {
+      name: 'weight',
+      control: {
+          type: 'select',
+          options: {
+              heavy: '600',
+              bold: '400',
+              regular: '300',
+              light: '200',
+          },
+      },
+  },
+  fontFamily: {
+    control: {
+        type: 'select',
+        options: {
+            body: 'body',
+            heading: 'heading',
+            utility: 'utility',
+        }
+    }
+}
+},
 }
 
-export const standard = () => (
-    <>
-        <Paragraph >
-            Occaecat culpa quis nulla do tempor amet sint veniam commodo veniam
-            aute ullamco. Magna reprehenderit aliquip nostrud excepteur irure.
-        </Paragraph>
-        <Display />
-        <Paragraph>
-            Adipisicing nostrud id laboris officia exercitation laboris in ipsum
-            nostrud qui culpa quis. Mollit velit fugiat et cillum ea officia.
-            Exercitation do magna sint fugiat adipisicing eu magna eiusmod
-            cupidatat non amet aute cillum. Dolor cupidatat proident non officia
-            nostrud officia proident sint tempor. Ex sunt anim velit consectetur
-            consectetur fugiat Lorem ut amet sit officia ut ea. Ea adipisicing
-            est ullamco consectetur.
-        </Paragraph>
-    </>
-)
+export const DisplayStory = (args) => <Display {...args} />
+
+DisplayStory.storyName = 'Display'

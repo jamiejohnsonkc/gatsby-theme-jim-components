@@ -21,7 +21,8 @@ Caption.propTypes = {
 
 Caption.defaultProps = {
     children:
-        "Figure 1. Captions draw attention to an image's relevance and/or credit sources.",
+        'Figure 1. Captions provide information sources and/or additional context.',
+    variant: 'styles.u3',
 }
 
 export default Caption
