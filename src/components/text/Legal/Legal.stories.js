@@ -1,17 +1,46 @@
 import React from 'react'
-
-import Copyright from '../../containers/Copyright'
 import Legal from './Legal'
 
 export default {
-    title: 'Components/Typography/Legal',
+    title: 'Components/Typography',
     component: Legal,
+    argTypes: {
+        variant: {
+            name: 'size',
+            control: {
+                type: 'select',
+                options: {
+                    large: 'styles.u1',
+                    medium: 'styles.u2',
+                    small: 'styles.u3',
+                },
+            },
+        },
+        fontWeight: {
+            name: 'weight',
+            control: {
+                type: 'select',
+                options: {
+                    heavy: '600',
+                    bold: '400',
+                    regular: '300',
+                    light: '200',
+                },
+            },
+        },
+        fontFamily: {
+            control: {
+                type: 'select',
+                options: {
+                    body: 'body',
+                    heading: 'heading',
+                    mono: 'mono',
+                },
+            },
+        },
+    },
 }
 
-export const standard = () => (
-    <div style={{ borderTop: 'thin solid #999', paddingTop: '8px' }}>
-        <Legal>
-            The large print giveth and the fine print taketh away. ©2020 All rights reserved.
-        </Legal>
-    </div>
-)
+export const LegalStory = (args) => <Legal {...args} />
+
+LegalStory.storyName = 'Legal'

@@ -22,7 +22,7 @@ const GroupHead = ({ isOpen, groupHead, ...props }) => (
             ],
             // fontSize: [0, 3, 3, 3, 3],
             // paddingLeft: 0,
-            // letterSpacing: 'normal',
+            // letterSpacing: 'regular',
             // fontWeight: 'bold',
             // textTransform: 'capitalize',
             // fontFamily: 'heading',

@@ -1,18 +1,21 @@
 import React from 'react'
-import Caption from './Caption'
+import Headline from './Headline'
 
 export default {
-	title: 'Components/Typography/Caption',
-	component: Caption,
+  title: 'Components/Typography',
+	component: Headline,
 	argTypes: {
 			variant: {
 					name: 'size',
 					control: {
 							type: 'select',
 							options: {
-									u1: 'styles.u1',
-									u2: 'styles.u2',
-									u3: 'styles.u3',
+								h1: 'styles.h1',
+								h2: 'styles.h2',
+								h3: 'styles.h3',
+								h4: 'styles.h4',
+								h5: 'styles.h5',
+								h6: 'styles.h6',
 							},
 					},
 			},
@@ -21,9 +24,9 @@ export default {
 				control: {
 						type: 'select',
 						options: {
+								heavy: 'heavy',
+								bold: 'bold',
 								semibold: 'semibold',
-								regular: 'regular',
-								light: 'light',
 						},
 				},
 		},
@@ -40,6 +43,6 @@ export default {
 	},
 }
 
-export const CaptionStory = (args) => <Caption {...args} />
+export const HeadlineStory = (args) => <Headline {...args} />
 
-CaptionStory.storyName = 'Caption'
+HeadlineStory.storyName = 'Headline'

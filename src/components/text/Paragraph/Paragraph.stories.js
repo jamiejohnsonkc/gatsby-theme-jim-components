@@ -1,3 +1,4 @@
+import React from 'react'
 import Paragraph from './Paragraph'
 
 export default {
@@ -20,10 +21,10 @@ export default {
             control: {
                 type: 'select',
                 options: {
-                    heavy: '600',
-                    bold: '400',
-                    regular: '300',
-                    light: '200',
+                    heavy: 'heavy',
+                    bold: 'bold',
+                    regular: 'regular',
+                    light: 'light',
                 },
             },
         },
@@ -33,7 +34,7 @@ export default {
                 options: {
                     body: 'body',
                     heading: 'heading',
-                    utility: 'utility',
+                    mono: 'mono',
                 }
             }
         }

@@ -62,7 +62,7 @@ export default {
     fontWeight: {
       control: {
         type: 'inline-radio',
-        options: ['light', 'normal', 'bold', 'heavy'],
+        options: ['light', 'regular', 'bold', 'heavy'],
       },
     },
     bg: {
@@ -99,7 +99,7 @@ export default {
         type: 'inline-radio',
         options: {
           thin: '.1em',
-          normal: '.1618em',
+          regular: '.1618em',
           thick: '.25em',
         },
       },
@@ -122,7 +122,7 @@ export default {
           spread: 'spread',
           loose: 'loose',
           lazy: 'lazy',
-          normal: 'normal',
+          regular: 'regular',
           pinch: 'pinch',
           snug: 'snug',
           tight: 'tight',

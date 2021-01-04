@@ -87,7 +87,7 @@ const ServiceCard = ({
                             '& .linkText': {
                                 fontSize: [1, 3, 3, 3, 2, 2],
                                 fontFamily: 'heading',
-                                fontWeight: 'normal',
+                                fontWeight: 'regular',
                                 color: 'primary',
                                 mr: 2,
                                 flex: '1',

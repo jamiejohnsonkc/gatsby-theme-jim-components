@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import Paragraph from '../Paragraph'
 import Display from './Display'
 
 export default {
@@ -24,10 +23,11 @@ export default {
       control: {
           type: 'select',
           options: {
-              heavy: '600',
-              bold: '400',
-              regular: '300',
-              light: '200',
+              heavy: 'heavy',
+              bold: 'bold',
+              semibold: 'semibold',
+              regular: 'regular',
+              light: 'light',
           },
       },
   },
@@ -37,7 +37,7 @@ export default {
         options: {
             body: 'body',
             heading: 'heading',
-            utility: 'utility',
+            mono: 'mono',
         }
     }
 }

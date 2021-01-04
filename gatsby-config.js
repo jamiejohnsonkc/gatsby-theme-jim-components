@@ -22,9 +22,9 @@ module.exports = {
 			options: {
 				google: {
 					families: [
-						// 'Roboto: 100,300,400,700,900',
-						// 'Roboto Slab: 300, 400, 700, 900',
-						'Spectral: 300,400,600,700',
+						'Roboto: 100,300,400,700,900',
+						'Roboto Slab: 300, 400, 700, 900',
+						'Neuton: 200,300,400,600,700,800',
 						'Source Sans Pro: 200,300,400,600,700,900',
 						'Source Code Pro',
 					],
