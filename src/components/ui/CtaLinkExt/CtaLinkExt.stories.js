@@ -5,20 +5,20 @@ import CtaLinkExt from './CtaLinkExt'
 import { darken } from '@theme-ui/color'
 
 export default {
-	title: 'Ui/Cta Link External',
+    title: 'Navigation/Links/Text + Icon',
 }
 
 export const standard = (props) => (
-	<>
-		<CtaLinkExt
-			{...props}
-			className='className'
-			iconColor='primary'
-			iconMarginLeft={1}
-			iconName='SolidNorthEastArrow'
-			iconSize='.5em'
-			linkText='Link'
-			linkTo='/'
-		/>
-	</>
+    <>
+        <CtaLinkExt
+            {...props}
+            className="className"
+            iconColor="primary"
+            iconMarginLeft={1}
+            iconName="SolidNorthEastArrow"
+            iconSize=".5em"
+            linkText="Link"
+            linkTo="/"
+        />
+    </>
 )

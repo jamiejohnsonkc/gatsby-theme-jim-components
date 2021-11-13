@@ -4,12 +4,14 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import styles from './keyframes.module.css'
+import animation from '../../../../../gatsby-theme-scroll-reveal/animation'
 
-//TODO refactor for reuse
+//TODO  remove theme styles
 
 const ScrollDownLineAnimatedVert = (props) => (
     <Grid
-        // columns=".5fr 2.5fr"
+        {...animation.fadeSlow}
+        columns=".5fr 2.5fr"
         {...props}
         sx={{
             height: '4em',
@@ -31,8 +33,7 @@ const ScrollDownLineAnimatedVert = (props) => (
                     paddingTop: '51px',
                     textAlign: 'center',
                     '&::before': {
-                        // background: (theme) => `${theme.colors.primary}`,
-                        bg: 'primary',
+                        background: (theme) => `${theme.colors.primary}`,
                         position: 'absolute',
                         top: '0px',
                         left: '50%',

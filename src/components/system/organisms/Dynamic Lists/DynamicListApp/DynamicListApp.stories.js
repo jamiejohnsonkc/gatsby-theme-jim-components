@@ -4,7 +4,7 @@ import DynamicList from '../DynamicList/DynamicList'
 import { List } from '../ListFpoData/ListFpoData.js'
 
 export default {
-	title: 'Containers/Lists/List Map',
+    title: 'Lists/Dynamic_Lists/Modular/App',
 }
 
 export const standard = (props) => <DynamicList list={List} />

@@ -2,11 +2,11 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 
-import JjGlyph from '../../../../svg/assets/fpo/jjGlyph.svg'
+import GatsbyLogo from '../../../../svg/assets/GatsbyLogo.svg'
 
 const FpoSvg = (props) => (
     <div>
-        <JjGlyph />
+        <GatsbyLogo />
     </div>
 )
 
