@@ -4,7 +4,11 @@
     "description": "jim components library",
     "main": "index.js",
     "license": "MIT",
-    "private": true,
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jamiejohnsonkc/gatsby-theme-jim-components.git"
+    },
     "peerDependencies": {
         "gatsby": "^2.24.47",
         "react": "^16.13.1",
