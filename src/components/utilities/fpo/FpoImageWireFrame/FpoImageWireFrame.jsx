@@ -10,7 +10,7 @@ const FpoImageWireFrame = (props) => (
         sx={{
             height: '100%',
             width: '100%',
-            background: 'lightGray',
+            background: 'faint',
             justifyContent: 'center',
             alignItems: 'center',
         }}

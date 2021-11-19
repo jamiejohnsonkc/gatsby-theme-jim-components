@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { jsx, Text, Box } from 'theme-ui'
 import React from 'react'
 import { ImArrowUpRight } from 'react-icons/im'
-import AnchorLink from '../../primitives/AnchorLink'
+import AnchorLink from '../AnchorLink'
 
-const CtaLinkInt = ({ linkTo, linkText, linkArt, color, ...props }) => (
+const CtaLinkInt = ({ linkTo, linkText, linkVisual, color, ...props }) => (
     <>
         <AnchorLink
             linkTo={linkTo}
@@ -40,12 +40,12 @@ const CtaLinkInt = ({ linkTo, linkText, linkArt, color, ...props }) => (
             </Text>
             <Box
                 {...props}
-                className="linkArt"
+                className="linkVisual"
                 sx={{
                     display: 'inline-block',
                 }}
             >
-                {linkArt}
+                {linkVisual}
             </Box>
         </AnchorLink>
     </>
@@ -55,7 +55,7 @@ CtaLinkInt.propTypes = {
     className: PropTypes.any,
     iconColor: PropTypes.any,
     iconMarginLeft: PropTypes.any,
-    linkArt: PropTypes.any,
+    linkVisual: PropTypes.any,
     linkText: PropTypes.any,
     linkTo: PropTypes.any,
 }
@@ -69,7 +69,7 @@ CtaLinkInt.defaultProps = {
     // color: 'text',
     // linkTo: '/',
     // linkText: 'Link',
-    linkArt: <ImArrowUpRight />,
+    linkVisual: <ImArrowUpRight />,
     // iconSize: '.5em',
     // iconColor: 'primary',
     // iconMarginLeft: 1,

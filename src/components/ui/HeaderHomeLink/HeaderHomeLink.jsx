@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx, Box } from 'theme-ui'
 import React from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import FpoLogo from '../../utilities/fpo/FpoLogo'
-import FpoGlyph from '../../utilities/fpo/FpoGlyph'
 
-const HomeLink = ({ largeScreenBrand, smallScreenBrand, ...props }) => (
+import PropTypes from 'prop-types'
+import FpoLogo from '../../../utilities/fpo/FpoLogo'
+import FpoGlyph from '../../../utilities/fpo/FpoGlyph'
+import { Link } from 'gatsby'
+
+const HomeLink = (props) => (
     <>
         <Link to="/">
             <Box
@@ -21,7 +22,7 @@ const HomeLink = ({ largeScreenBrand, smallScreenBrand, ...props }) => (
                     ],
                 }}
             >
-                {largeScreenBrand}
+                {props.largeScreenBrand}
             </Box>
 
             <Box
@@ -31,7 +32,7 @@ const HomeLink = ({ largeScreenBrand, smallScreenBrand, ...props }) => (
                     display: ['inline-flex', 'none', 'none', 'none'],
                 }}
             >
-                {smallScreenBrand}
+                {props.smallScreenBrand}
             </Box>
         </Link>
     </>

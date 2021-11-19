@@ -1,8 +1,8 @@
 import React from 'react'
-import HomeLink from './HomeLink'
+import HeaderHomeLink from './HeaderHomeLink'
 
 export default {
-	title: 'Ui/HomeLink',
+    title: 'HeaderHomeLink',
 }
 
-export const standard = () => <HomeLink />
+export const standard = () => <HeaderHomeLink />

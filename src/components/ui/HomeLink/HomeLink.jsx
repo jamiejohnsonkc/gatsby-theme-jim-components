@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import FpoLogo from '../../utilities/fpo/FpoLogo'
 import FpoGlyph from '../../utilities/fpo/FpoGlyph'
 
-const HeaderHomeLink = ({ largeScreenBrand, smallScreenBrand, ...props }) => (
+const HeaderHomeLink = (props) => (
     <>
         <Link to="/">
             <Box
@@ -21,7 +21,7 @@ const HeaderHomeLink = ({ largeScreenBrand, smallScreenBrand, ...props }) => (
                     ],
                 }}
             >
-                {largeScreenBrand}
+                {props.largeScreenBrand}
             </Box>
 
             <Box
@@ -31,7 +31,7 @@ const HeaderHomeLink = ({ largeScreenBrand, smallScreenBrand, ...props }) => (
                     display: ['inline-flex', 'none', 'none', 'none'],
                 }}
             >
-                {smallScreenBrand}
+                {props.smallScreenBrand}
             </Box>
         </Link>
     </>

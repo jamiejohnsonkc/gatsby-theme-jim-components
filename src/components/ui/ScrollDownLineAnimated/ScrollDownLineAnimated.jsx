@@ -4,11 +4,13 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import styles from './keyframes.module.css'
+import animation from '../../../../../gatsby-theme-scroll-reveal/animation.js'
 
-//TODO refactor for reuse
+//TODO remove theme styles
 
 const ScrollDownLineAnimated = ({ mt, ml, ...props }) => (
     <Grid
+        {...animation.slideUpScrollDown}
         columns=".5fr 2.5fr"
         {...props}
         sx={{
@@ -26,7 +28,7 @@ const ScrollDownLineAnimated = ({ mt, ml, ...props }) => (
                 null,
                 null,
             ],
-            bottom: [null, '24px', 'unset', '-44px', null, null],
+            // bottom: [null, '24px', 'unset', '-44px', '-60px', '0'],
             left: '0px',
             gap: '0',
             alignItems: 'center',

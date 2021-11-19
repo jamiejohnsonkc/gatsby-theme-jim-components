@@ -5,8 +5,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import GlyphIpsum from '../../../../svg/assets/fpo/glyph-1.svg'
 
-//TODO refactor
-
 const FpoGlyph = (props) => (
     <>
         <GlyphIpsum

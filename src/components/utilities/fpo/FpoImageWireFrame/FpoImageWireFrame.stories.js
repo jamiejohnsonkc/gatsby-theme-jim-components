@@ -1,15 +1,15 @@
 /** @jsx jsx */
-import { jsx, Box } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import React from 'react'
 import FpoImageWireFrame from './FpoImageWireFrame'
-
+import StoryBox from '../../../../../../stories/StoryBox/StoryBox'
 
 export default {
-	title: 'Dev Utilities/FpoImageWireFrame',
+    title: 'FpoImageWireFrame',
 }
 
 export const standard = (props) => (
-	<Box height='50vh' width='50vw'>
-		<FpoImageWireFrame />
-	</Box>
+    <StoryBox height="50vh" width="50vw">
+        <FpoImageWireFrame />
+    </StoryBox>
 )

@@ -5,8 +5,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-//TODO confirm compatibility/necessity against theme-ui's like component
-
 const NavLink = (props) => (
     <Link
         {...props}

@@ -3,18 +3,14 @@ import PropTypes from 'prop-types'
 import { jsx, Text, Box, Link } from 'theme-ui'
 import React from 'react'
 import { ImArrowUpRight } from 'react-icons/im'
+import Display from '../../designElements/Text/Display'
 
 const CtaLinkExt = ({
     linkTo,
     linkText,
-    linkArt,
+    linkVisual,
     className,
     color,
-    width,
-    height,
-    bg,
-    padding,
-    margin,
     ...props
 }) => (
     <>
@@ -23,52 +19,74 @@ const CtaLinkExt = ({
             className={className}
             {...props}
             sx={{
-                width,
-                height,
-                bg,
-                padding,
-                margin,
-                color,
-                display: 'inline-block',
                 variant: 'links.ctaLink',
             }}
+            // sx={{
+            // 	display: 'inline-block',
+            // }}
+            // sx={{
+            // width,
+            // height,
+            // bg,
+            // padding,
+            // margin,
+            // color,
+            // display: 'inline-flex',
+
+            // }}
         >
-            <Text
+            <Display
                 {...props}
                 className="linkText"
                 sx={{
                     color,
                     display: 'inline-block',
+                    // variant: 'styles.b3',
                 }}
             >
                 {linkText}
-            </Text>
+            </Display>
             <Box
                 {...props}
-                className="linkArt"
+                className="linkVisual"
                 sx={{
                     display: 'inline-block',
+                    '& > svg': {
+                        width: '1em',
+                    },
                 }}
             >
-                {linkArt}
+                {linkVisual}
             </Box>
         </Link>
     </>
 )
 
 CtaLinkExt.propTypes = {
-    className: PropTypes.string,
-    iconColor: PropTypes.string,
-    iconMarginLeft: PropTypes.string,
-    linkArt: PropTypes.any,
-    linkText: PropTypes.string,
-    linkTo: PropTypes.string,
+    className: PropTypes.any,
+    iconColor: PropTypes.any,
+    iconMarginLeft: PropTypes.any,
+    linkVisual: PropTypes.any,
+
+    linkText: PropTypes.any,
+    linkTo: PropTypes.any,
 }
 
 CtaLinkExt.defaultProps = {
-    linkArt: <ImArrowUpRight />,
+    // height: '',
+    // margin: '',
+    // padding: '',
+    // width: '',
+    // bg: 'transparent',
+    // color: 'text',
+    // linkTo: '/',
+    // linkText: 'Link',
+    linkVisual: <ImArrowUpRight />,
+    // iconSize: '.5em',
+    // iconColor: 'primary',
+    // iconMarginLeft: 1,
     className: 'ctaLink',
-    linkText: 'CtaLink',
+    linkText: 'Link',
     linkTo: '/',
 }
 
