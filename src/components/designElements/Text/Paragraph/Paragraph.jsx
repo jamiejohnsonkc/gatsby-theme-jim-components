@@ -3,6 +3,17 @@ import { jsx, Text } from 'theme-ui'
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// const Paragraph = ({ as, ...props }) => (
+//     <Text
+//         {...props}
+//         as={as}
+//         sx={{
+//             variant: 'paragraph',
+//         }}
+//         children={props.children}
+//     />
+// )
+
 const Paragraph = ({ as, ...props }) => (
     <Text
         {...props}
@@ -10,8 +21,9 @@ const Paragraph = ({ as, ...props }) => (
         sx={{
             variant: 'paragraph',
         }}
-        children={props.children}
-    />
+    >
+        {props.children}
+    </Text>
 )
 
 Paragraph.propTypes = {
