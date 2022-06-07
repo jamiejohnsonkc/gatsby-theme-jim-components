@@ -4,15 +4,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // const Paragraph = ({ as, ...props }) => (
-//     <Text
-//         {...props}
-//         as={as}
-//         sx={{
-//             variant: 'paragraph',
-//         }}
-//         children={props.children}
-//     />
-// )
 
 const Paragraph = ({ as, ...props }) => (
     <Text
@@ -28,7 +19,7 @@ const Paragraph = ({ as, ...props }) => (
 
 Paragraph.propTypes = {
     variant: PropTypes.string,
-    children: PropTypes.string,
+    children: PropTypes.any,
 }
 
 Paragraph.defaultProps = {

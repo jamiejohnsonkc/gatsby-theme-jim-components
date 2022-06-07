@@ -44,7 +44,7 @@ const SectionFlex = ({
 SectionFlex.propTypes = {
     alignItems: PropTypes.string,
     bg: PropTypes.any,
-    children: PropTypes.string,
+    children: PropTypes.any,
     className: PropTypes.any,
     containerVariant: PropTypes.string,
     justifyContent: PropTypes.string,

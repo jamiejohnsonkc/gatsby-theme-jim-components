@@ -40,7 +40,7 @@ const Paragraph = ({
 
 Paragraph.propTypes = {
     variant: PropTypes.string,
-    children: PropTypes.string,
+    children: PropTypes.any,
     fontWeight: PropTypes.string,
     maxWidth: PropTypes.string,
     fontFamily: PropTypes.string,
